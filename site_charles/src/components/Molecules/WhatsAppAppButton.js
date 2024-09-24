@@ -20,7 +20,7 @@ const WhatsAppButton = ({ phoneNumber, message }) => {
             backgroundColor: '#25D366',
             borderRadius: '50%',
             padding: '0px',
-            position: 'fixed', // Position fixe pour rester visible
+            position: 'absolute', // Position fixe pour rester visible
             bottom: '20px',    // Distance du bas
             right: '20px',     // Distance de la droite
             zIndex: '1000',    // S'assurer que le bouton est au-dessus d'autres éléments

@@ -2,13 +2,15 @@ import React from 'react';
 import { Navbar, Nav, Carousel } from 'react-bootstrap';
 import './Styles.css';
 import image1 from '../../images/pexels-the-coach-space-2977581 1.png';
+import image2 from '../../images/bg.png';
+import image3 from '../../images/bg2.png';
 import WhatsAppButton from '../Molecules/WhatsAppAppButton';
 
 const Header = () => {
   const carouselItems = [
     { src: image1, alt: 'Image 1', caption: 'Bienvenue chez CHARLES COMPANY' },
-    { src: image1 , alt: 'Image 2', caption: 'Service de qualité pour vos projets' },
-    { src: image1, alt: 'Image 3', caption: 'Expertise en construction' },
+    { src: image2 , alt: 'Image 2', caption: 'Service de qualité pour vos projets' },
+    { src: image3, alt: 'Image 3', caption: 'Expertise en construction' },
     { src: image1, alt: 'Image 4', caption: 'Fiabilité et sécurité sur le terrain' }
   ];
 
@@ -21,6 +23,8 @@ const Header = () => {
               className="d-block w-100 carousel-image"
               src={item.src}
               alt={item.alt}
+              style={{ height: '100vh', objectFit: 'cover' }} 
+
             />
             <Carousel.Caption>
               <h1>{item.caption}</h1>
