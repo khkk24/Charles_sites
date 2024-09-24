@@ -8,7 +8,9 @@ const HomePage = () => {
   return (
     <>
           <Header />
-
+            <main>
+              
+            </main>
           <Footer />
     </>
   );
