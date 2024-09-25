@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Header from '../components/organisms/Header'
+import Header from '../components/organisms/Header';
+import Service from '../components/organisms/ServicesSection'
 import Footer from '../components/organisms/Footer';
-
 
 const HomePage = () => {
   return (
     <>
           <Header />
-
+          <Service />
           <Footer />
     </>
   );
