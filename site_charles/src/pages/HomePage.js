@@ -9,6 +9,7 @@ import ClientsSection from '../components/organisms/ClientsSection';
 const HomePage = () => {
   return (
     <>
+
         <Header />
             <main>
               <AboutSection />
@@ -16,6 +17,7 @@ const HomePage = () => {
             </main>
 
         <Footer />
+
     </>
   );
 };
