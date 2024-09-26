@@ -85,6 +85,44 @@
 }
 
 
+
+/* Le conteneur principal du carrousel */
+.carousel-container {
+    position: relative;
+    height: 100vh;
+    /* Occupe toute la hauteur de la fenêtre */
+    overflow: hidden;
+}
+
+/* Le carrousel doit occuper toute la hauteur */
+.carousel-fullscreen {
+    height: 100vh;
+}
+
+/* L'image du carrousel doit couvrir toute la hauteur et la largeur */
+.carousel-image {
+    height: 100vh;
+    object-fit: cover;
+    /* Couvre l'écran sans distorsion */
+}
+
+/* Positionner la navbar au-dessus du carrousel */
+.navbar-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    /* Assure que le Navbar est au-dessus du carrousel */
+}
+
+/* Pour s'assurer que le texte des légendes reste visible */
+.carousel-caption {
+    z-index: 5;
+    color: #fff;
+}
+
+
+
 /*
 ###################### ABOUT #################
 */
@@ -235,7 +273,11 @@
     .client-logo {
         max-width: 80%;
     }
+
 }
+
+
+
 /* Le conteneur principal du carrousel */
 .carousel-container {
     position: relative;
@@ -269,5 +311,5 @@
 .carousel-caption {
     z-index: 5;
     color: #fff;
+    }
 
-}
