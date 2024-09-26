@@ -2,16 +2,22 @@ import React from 'react';
 
 import Header from '../components/organisms/Header'
 import Footer from '../components/organisms/Footer';
+import AboutSection from '../components/organisms/AboutSection';
+import ClientsSection from '../components/organisms/ClientsSection';
 
 
 const HomePage = () => {
   return (
     <>
-          <Header />
+
+        <Header />
             <main>
-              
+              <AboutSection />
+              <ClientsSection />
             </main>
-          <Footer />
+
+        <Footer />
+
     </>
   );
 };

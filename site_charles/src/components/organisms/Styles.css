@@ -9,6 +9,9 @@
     
 }
 
+/*
+################# Footer #################
+*/
 
 
 .footer-link:hover {
@@ -81,6 +84,7 @@
     color: #ccc;
 }
 
+
 /* Le conteneur principal du carrousel */
 .carousel-container {
     position: relative;
@@ -114,4 +118,156 @@
 .carousel-caption {
     z-index: 5;
     color: #fff;
+}
+/*
+###################### ABOUT #################
+*/
+
+.about-us-container {
+  background-color: #FF6F1E; /* Orange de fond */
+  color: white;
+  height: 100vh; /* Occupe toute la hauteur de l'écran */
+}
+
+.about-us-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about-us-title {
+  font-size: 4rem; /* Taille du texte principal (responsive) */
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.about-us-subtitle {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .about-us-title {
+    font-size: 2.5rem; /* Taille du texte réduite pour les petits écrans */
+  }
+
+  .about-us-subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+.about-us-container {
+    background-color: #FF6F1E;
+    /* Orange de fond */
+    color: white;
+    height: 100vh;
+    /* Occupe toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Aligne les sections en haut, au milieu, et en bas */
+}
+
+.about-us-header {
+    margin-top: 20px;
+    /* Titre en haut de la page */
+    text-align: center;
+}
+
+.about-us-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.about-us-main {
+    flex-grow: 1;
+    /* Laisse cette section prendre l'espace au milieu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-title {
+    font-size: 3rem;
+    /* Taille du texte principal */
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about-us-footer {
+    text-align: center;
+    padding-bottom: 20px;
+    /* Un peu d'espace avant le bas de la page */
+}
+
+.about-us-subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .about-us-title {
+        font-size: 2.5rem;
+        /* Réduire la taille du texte pour les petits écrans */
+    }
+
+    .about-us-subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
+
+/*
+###################### CLIENTS #################
+*/
+
+.client-page {
+    background-color: #ffffff;
+    /* Fond blanc */
+    height: 100vh;
+    /* Occupe toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.client-header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.client-title {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.client-logos {
+    margin-top: 50px;
+}
+
+.client-logo {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .client-title {
+        font-size: 3rem;
+    }
+
+    .client-logo {
+        max-width: 80%;
+    }
+
 }
