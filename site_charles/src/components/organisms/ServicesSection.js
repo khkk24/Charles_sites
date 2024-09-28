@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from "../Molecules/Card";
@@ -31,9 +30,9 @@ const Service = () => {
     return (
         <div className='service-wrapper'>
           <h1 id='service-title'> Serviços </h1>
-          <Row className='teste1' >
+          <Row>
             { data.map((item, index) => (
-                <Col className='teste' key= {index}> <Card data= { item } /> </Col>
+                <Col className='col' key= {index}> <Card data= { item } /> </Col>
             ))}
             
           </Row>

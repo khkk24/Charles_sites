@@ -1,6 +1,6 @@
+
 .nav-item-space {
     margin-right: 40px !important;
-   
 
 }
 
@@ -9,19 +9,15 @@
     
 }
 
-.teste1{
-    border: 1px blue solid;
-}
-
-.teste{
-    border: 1px red solid;
-}
-
 .service-wrapper{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin: 1.5rem 0rem;
-    border: 1px solid red;
+}
+
+.service-wrapper .col{
+    display: flex;
+    justify-content: center;
 }
 
 .footer-link:hover {
