@@ -14,14 +14,25 @@
     text-align: center;
     margin: 1.5rem 0rem;
 }
-/*
-################# Footer #################
-*/
 
 .service-wrapper .col{
     display: flex;
     justify-content: center;
 }
+
+.contact-wrapper {
+    margin: 1.5rem 0rem;
+}
+
+.contact-wrapper > h1{
+    text-align: center;
+    margin: 1.5rem 0rem;
+}
+
+
+/*
+################# Footer #################
+*/
 
 .footer-link:hover {
     text-decoration: underline;
