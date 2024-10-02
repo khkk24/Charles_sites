@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './Styles.css';
+import {JackInTheBox} from 'react-awesome-reveal';
 
 // Importer les logos
 // import slackLogo from '../../images/slack.png';
@@ -16,7 +17,9 @@ const ClientsSection = () => {
         {/* Titre "Clientes" centré en haut */}
         <Row className="client-header">
           <Col>
-            <h1 className="client-title">Clientes</h1>
+            <JackInTheBox triggerOnce>
+              <h1 className="client-title">Clientes</h1>
+            </JackInTheBox>
           </Col>
         </Row>
 

@@ -5,6 +5,8 @@ import image1 from '../../images/pexels-the-coach-space-2977581 1.png';
 import image2 from '../../images/bg.png';
 import image3 from '../../images/bg2.png';
 import WhatsAppButton from '../Molecules/WhatsAppAppButton';
+import { Zoom, Slide , Fade, Bounce,Flip,JackInTheBox} from 'react-awesome-reveal';
+// Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Rotate, Slide
 
 const Header = () => {
   const carouselItems = [
@@ -26,9 +28,12 @@ const Header = () => {
               style={{ height: '100vh', objectFit: 'cover' }} 
 
             />
-            <Carousel.Caption>
-              <h1>{item.caption}</h1>
-              <WhatsAppButton phoneNumber="+5541996364063" message="Bonjour, je suis intéressé par vos services. Pouvez-vous me contacter ?" />
+            <Carousel.Caption className="carousel-caption">
+              <JackInTheBox triggerOnce>
+                <h1>{item.caption}</h1>
+              </JackInTheBox>
+                <WhatsAppButton phoneNumber="+5541996364063" message="Bonjour, je suis intéressé par vos services. Pouvez-vous me contacter ?" />
+              
             </Carousel.Caption>
           </Carousel.Item>
         ))}

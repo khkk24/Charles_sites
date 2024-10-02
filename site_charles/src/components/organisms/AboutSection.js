@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import {  Fade , JackInTheBox} from 'react-awesome-reveal';
+
 import './Styles.css';
 
 const AboutSection = () => {
@@ -9,14 +11,18 @@ const AboutSection = () => {
         {/* Titre "About Us" en haut et centré */}
         <Row className="about-us-header">
           <Col>
-            <p className="about-us-heading">About Us</p>
+            <Fade>
+              <p className="about-us-heading">About Us</p>
+            </Fade>
+            
           </Col>
         </Row>
 
         {/* Contenu principal centré au milieu */}
         <Row className="about-us-main">
           <Col>
-            <h1 className="about-us-title">We are a strategic partner<br />to our amazing clients.</h1>
+            <JackInTheBox>
+            <h1 className="about-us-title">We are a strategic partner<br />to our amazing clients.</h1></JackInTheBox>
           </Col>
         </Row>
 
