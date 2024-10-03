@@ -1,12 +1,13 @@
 import React from 'react';
 import { Navbar, Nav, Carousel } from 'react-bootstrap';
+import WhatsAppButton from '../Molecules/WhatsAppAppButton';
+import { JackInTheBox} from 'react-awesome-reveal';
+// Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Rotate, Slide
 import './Styles.css';
+
 import image1 from '../../images/pexels-the-coach-space-2977581 1.png';
 import image2 from '../../images/bg.png';
 import image3 from '../../images/bg2.png';
-import WhatsAppButton from '../Molecules/WhatsAppAppButton';
-import { Zoom, Slide , Fade, Bounce,Flip,JackInTheBox} from 'react-awesome-reveal';
-// Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Rotate, Slide
 
 const Header = () => {
   const carouselItems = [
@@ -38,7 +39,7 @@ const Header = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <Navbar bg="light" expand="lg" fixed="top" className="navbar-overlay">
+      <Navbar expand="lg" fixed="top" className="navbar-overlay">
         <Navbar.Brand href="#">ENIGMA ELETRÔNICO</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -6,28 +6,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'; 
 import './Styles.css';
 
-let infoData =[
-    {
-        "title": "Endereço",
-        "text": "Rua xpto, 100 , Centro-Curitiba",
-        "icon": faFacebook,
-    },
-    {
-        "title": "Telefone",
-        "text": "41 9 9999-9999",
-        "icon": faFacebook,
-    },
-    {
-        "title": "E-mail",
-        "text": "Example@gmail.com",
-        "icon": faFacebook,
-    }
-]
-
 const Contact = () => {
+
+    let infoData = [
+        {
+            "title": "Endereço",
+            "text": "Rua xpto, 100 , Centro-Curitiba",
+            "icon": faFacebook,
+        },
+        {
+            "title": "Telefone",
+            "text": "41 9 9999-9999",
+            "icon": faFacebook,
+        },
+        {
+            "title": "E-mail",
+            "text": "Example@gmail.com",
+            "icon": faFacebook,
+        }
+    ]
+
     return (
         <div className='contact-wrapper'>
-            <h1>Contact</h1>
+            <h1 id="contact-title">Contact</h1>
             <Container>
                 <Row>
                     <Col lg={3} className='icon-text-wrapper'>

@@ -12,9 +12,8 @@ const AboutSection = () => {
         <Row className="about-us-header">
           <Col>
             <Fade>
-              <p className="about-us-heading">About Us</p>
+              <h1 className="about-us-heading">About Us</h1>
             </Fade>
-            
           </Col>
         </Row>
 

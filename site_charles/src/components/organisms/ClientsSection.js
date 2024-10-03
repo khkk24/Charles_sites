@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import './Styles.css';
 import {JackInTheBox} from 'react-awesome-reveal';
+import './Styles.css';
 
 // Importer les logos
 // import slackLogo from '../../images/slack.png';

@@ -4,7 +4,8 @@ import Col from 'react-bootstrap/Col';
 import Button from '../Atoms/Button';
 import './Styles.css';
 
-function Form() {
+const Form = () => {
+
   return (
     <div className='form-wrapper'>
         <FormBS>
