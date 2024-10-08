@@ -31,7 +31,7 @@ const Service = () => {
     ]
 
     return (
-        <div className='service-wrapper'>
+        <div id="servicos" className='service-wrapper'>
             <Fade>
                 <h1 id='service-title'> Serviços </h1>
             </Fade>

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import {  Fade , JackInTheBox} from 'react-awesome-reveal';
-
 import './Styles.css';
 
 const AboutSection = () => {
   return (
-    <div className="about-us-container">
+    <div id="about" className="about-us-container">
       <Container fluid className="d-flex flex-column justify-content-between align-items-center h-100">
         {/* Titre "About Us" en haut et centré */}
         <Row className="about-us-header">

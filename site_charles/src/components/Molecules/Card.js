@@ -13,7 +13,7 @@ const Card = ({ data }) => {
                 <CardBS.Text>
                   { text }
                 </CardBS.Text>
-                <Button text="Solicitar orçamento"/>
+                <Button text="Ver serviço" color="light"/>
             </CardBS.Body>
           </div>
         </CardBS>

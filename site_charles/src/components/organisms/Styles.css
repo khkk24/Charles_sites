@@ -4,16 +4,17 @@
 }
 /* Inicio header*/
 .nav-item-space {
-    margin-right: 40px !important;
+    margin-right: 20px !important;
+    color: white;
 }
 
 .nav-item-space:last-child {
-    margin-right: 30px !important;
+    margin-right: 25px !important;
 }
 
 /* Positionner la navbar au-dessus du carrousel */
 .navbar-overlay {
-    background-color: rgb(218, 229, 244)!important;
+    font-size: larger;
     position: absolute;
     top: 0;
     width: 100%;
@@ -230,7 +231,7 @@
 
 .contact-wrapper .icon-wrapper{
     display: flex;
-    background-color: rgb(218, 229, 244);
+    background-color:rgb(196, 217, 240)!important;;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -260,7 +261,7 @@
 }
 
 .footer {
-    background-color: #1e1e1e;
+    background-color:rgb(0, 123, 255);
     color: #fff;
     padding: 40px 20px;
     text-align: left;
@@ -325,6 +326,9 @@
     color: #ccc;
 }
 
+.list-unstyled a{
+    color: white!important;
+}
 /* Fim footer*/
 
 
