@@ -1,22 +1,38 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import {  Fade , JackInTheBox} from 'react-awesome-reveal';
-
+import { Fade, JackInTheBox } from 'react-awesome-reveal';
+import {Player} from '@lottiefiles/react-lottie-player'; 
 import './Styles.css';
+import animationData from '../../images/Animation - 1737315090180.json';
+
 
 const AboutSection = () => {
   return (
-    <div className="about-us-container">
-      <Container fluid className="d-flex flex-column justify-content-between align-items-center h-100">
+    <div id="about" className="about-us-container">
+      <Container fluid className="d-flex flex-column justify-content-between align-items-center h-100 w-100">
         {/* Titre "About Us" en haut et centré */}
         <Row className="about-us-header">
           <Col>
             <Fade>
-              <p className="about-us-heading">About Us</p>
+              <h1 className="about-us-heading">About Us</h1>
             </Fade>
+          </Col>
+        </Row>
+
+        <Row className="about-us-animation" >
+          <Col className="d-flex justify-content-center align-items-center ">
+            <div className="animated-globe">
+              <Player
+                src={animationData} // Données de l'animation JSON
+                autoplay
+                loop
+                style={{ width: 300, height: 300 }} // Ajustez les dimensions si nécessaire
+              />
+            </div>
             
           </Col>
         </Row>
+
 
         {/* Contenu principal centré au milieu */}
         <Row className="about-us-main">

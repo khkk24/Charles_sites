@@ -1,34 +1,35 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from '../Molecules/Form';
+import Form from '../Molecules/ContactForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'; 
+import { faBuilding, faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import './Styles.css';
 
-let infoData =[
-    {
-        "title": "Endereço",
-        "text": "Rua xpto, 100 , Centro-Curitiba",
-        "icon": faFacebook,
-    },
-    {
-        "title": "Telefone",
-        "text": "41 9 9999-9999",
-        "icon": faFacebook,
-    },
-    {
-        "title": "E-mail",
-        "text": "Example@gmail.com",
-        "icon": faFacebook,
-    }
-]
-
 const Contact = () => {
+
+    let infoData = [
+        {
+            "title": "Endereço",
+            "text": "Rua xpto, 100 , Centro-Curitiba",
+            "icon": faBuilding,
+        },
+        {
+            "title": "Telefone",
+            "text": "41 9 9999-9999",
+            "icon": faPhone,
+        },
+        {
+            "title": "E-mail",
+            "text": "Example@gmail.com",
+            "icon": faEnvelope,
+        }
+    ]
+
     return (
-        <div className='contact-wrapper'>
-            <h1>Contact</h1>
-            <Container>
+        <div id="contact" className='contact-wrapper'>
+            <h1 id="contact-title">Contact</h1>
+            <Container fluid>
                 <Row>
                     <Col lg={3} className='icon-text-wrapper'>
                         { infoData.map((info,index) =>(

@@ -31,7 +31,7 @@ const Footer = () => {
           <Col md={3}>
             <h5>Empresa</h5>
             <ul className="list-unstyled">
-              <li><a href="/about">About</a></li>
+              <li><a href="#about">About</a></li>
               <li><a href="/projects">Projects</a></li>
               
             </ul>

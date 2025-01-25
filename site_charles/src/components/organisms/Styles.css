@@ -1,39 +1,392 @@
 
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Inicio header*/
 .nav-item-space {
-    margin-right: 40px !important;
+    position: relative;
+    margin: 0 15px;
+    /* margin-right: 20px !important; */
+    /* color: white; */
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.nav-item-space:hover {
+    color: #007bff;
 }
 
 .nav-item-space:last-child {
-    margin-right: 30px !important;
+    margin-right: 25px !important;
+}
+
+.nav-item-space::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+.nav-item-space:hover::after {
+    width: 100%;
+    /* Le trait rouge apparaît */
+}
+
+.nav-item-space.active {
+    color: #007bff;
+    /* Change la couleur du texte de l'élément actif */
+}
+
+.nav-item-space.active::after {
+    width: 100%;
+    /* Le trait rouge reste visible pour l'élément actif */
+}
+
+/* Positionner la navbar au-dessus du carrousel */
+.navbar-overlay {
+    font-size: larger;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    /* Assure que le Navbar est au-dessus du carrousel */
+}
+.navbar-transparent {
+    background-color: transparent !important;
+}
+
+.navbar-blur {
+    background-color: rgba(137, 181, 236, 0.358) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Effet de flou */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Ombre discrète */
+}
+
+.navbar-overlay .nav-item-space {
+    margin: 0 15px;
+    color: #333;
+}
+
+.navbar-overlay .nav-item-space:hover {
+    color: #007bff;
+}
+/* Fim header*/
+
+/* Inicio carousel*/
+/* Le conteneur principal du carrousel */
+.carousel-container {
+    position: relative;
+    height: 100vh;
+    /* Occupe toute la hauteur de la fenêtre */
+    overflow: hidden;
+}
+
+/* Le carrousel doit occuper toute la hauteur */
+.carousel-fullscreen {
+    height: 100vh;
+}
+
+/* L'image du carrousel doit couvrir toute la hauteur et la largeur */
+.carousel-image {
+    height: 100vh;
+    object-fit: cover;
+    /* Couvre l'écran sans distorsion */
+}
+
+/* Pour s'assurer que le texte des légendes reste visible */
+.carousel-caption {
+    z-index: 5;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    z-index: 5;
+    color: #fff;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.carousel-caption h1 {
+    font-size: 4rem;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Space Grotesk",
+            sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.2;
+    /* Espacement entre les lignes */
+}
+
+.whatsapp-button {
+    margin-top: 20px;
     
 }
 
+/* Fim carousel*/
+
+/*Inicio About*/
+
+.about-us-container {
+    background-color: rgb(248, 248, 249);    /*#FF6F1E;*/
+    /* Orange de fond */
+    /*color: white;*/
+
+    height: 100vh;
+    /* Occupe toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Aligne les sections en haut, au milieu, et en bas */
+    }
+  
+.about-us-animation {
+    /* background-color: rgba(137, 181, 236, 0.358); */
+    width: 100%;
+    height: 35%;
+    align-items: start;
+    display: flex;
+    justify-content:right;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 15px 0px;
+
+}
+.about-us-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+  
+.about-us-title {
+    font-size: 2.5rem;
+    /* Taille du texte principal */
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+  
+.about-us-subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us-header {
+    margin-top: 20px;
+    /* Titre en haut de la page */
+    text-align: center;
+}
+
+.about-us-main {
+    flex-grow: 1;
+    /* Laisse cette section prendre l'espace au milieu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    width: 100%;
+    height: 30%;
+}
+
+.about-us-footer {
+    text-align: center;
+    padding-bottom: 20px;
+    /* Un peu d'espace avant le bas de la page */
+}
+
+.animated-globe {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.globe-image {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.flags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 10s linear infinite;
+}
+
+.flags .flag {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+/*  */
+/* 
+.flags .flag {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+} */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Fim about*/
+
+/*Inicio serviço */
+
 .service-wrapper{
-    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(248, 248, 249);
     text-align: center;
     margin: 1.5rem 0rem;
 }
 
 #service-title {
     font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
     margin-bottom: 40px;
 }
 
-.col {
-    margin-bottom: 30px;
-}
-/*
-################# Footer #################
-*/
-
-.service-wrapper .col{
+.service-wrapper .col-card{
     display: flex;
     justify-content: center;
 }
 
+.col-card {
+    margin-bottom: 20px;
+    
+}
+
+.card-container {
+    position: relative;
+    perspective: 1000px;
+    /* Ajoute une profondeur pour l'effet 3D */
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.card-container:hover {
+    transform: scale(1.05);
+    /* Agrandit légèrement la carte */
+    z-index: 10;
+    /* Apporte la carte au premier plan */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    /* Ajoute une ombre */
+}
+
+.card-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover img {
+    transform: scale(1.1);
+    /* Zoom léger sur l'image */
+}
+
+.card-legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-container:hover .card-legend {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*.col {
+    margin-bottom: 30px;
+}*/
+
+/* Fim serviço */
+
+/* Inicio cliente*/
+
+.client-page {
+    background-color: #ffffff;
+    /* Fond blanc */
+    height: 100vh;
+    /* Occupe toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.client-header {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.client-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.client-logos {
+    margin-top: 50px;
+}
+
+.client-logo {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Fim cliente*/
+
+/* Inicio contato e form*/
+
+
+#contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
 .contact-wrapper {
-    font-family: 'Times New Roman', Times, serif;
+   background-color: rgb(248, 248, 249);
     margin: 1.5rem 0rem;
 }
 
@@ -42,7 +395,7 @@
     margin: 1.5rem 0rem;
 }
 
-.icon-text-wrapper{
+.contact-wrapper .icon-text-wrapper{
     background-color: rgba(249, 249, 249, 0.632); 
     border-radius: 8px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 
@@ -50,14 +403,14 @@
     padding: 1.2rem;
 }
 
-.icon-text-section{
+.contact-wrapper .icon-text-section{
     display: flex;
     margin-bottom: 1.5em;
 }
 
-.icon-wrapper{
+.contact-wrapper .icon-wrapper{
     display: flex;
-    background-color: rgb(235, 240, 247);
+    background-color:rgb(196, 217, 240)!important;;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -65,29 +418,29 @@
     align-items: center;
 }
 
-.text-wrapper{
+.contact-wrapper .text-wrapper{
     margin-left: 0.7em;
 }
 
-.title-text{
+.contact-wrapper .title-text{
     margin-block-end: 0px;
 }
 
-.img-address{
+.contact-wrapper .img-address{
     width: 100%;
     height: auto;
 }
 
-/*
-################# Footer #################
-*/
+/*Fim contato e form*/
+
+/*Inicio Footer */
 
 .footer-link:hover {
     text-decoration: underline;
 }
 
 .footer {
-    background-color: #1e1e1e;
+    background-color:rgb(0, 123, 255);
     color: #fff;
     padding: 40px 20px;
     text-align: left;
@@ -152,137 +505,11 @@
     color: #ccc;
 }
 
-
-
-/* Le conteneur principal du carrousel */
-.carousel-container {
-    position: relative;
-    height: 100vh;
-    /* Occupe toute la hauteur de la fenêtre */
-    overflow: hidden;
+.list-unstyled a{
+    color: white!important;
 }
+/* Fim footer*/
 
-/* Le carrousel doit occuper toute la hauteur */
-.carousel-fullscreen {
-    height: 100vh;
-}
-
-/* L'image du carrousel doit couvrir toute la hauteur et la largeur */
-.carousel-image {
-    height: 100vh;
-    object-fit: cover;
-    /* Couvre l'écran sans distorsion */
-}
-
-/* Positionner la navbar au-dessus du carrousel */
-.navbar-overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    /* Assure que le Navbar est au-dessus du carrousel */
-}
-
-/* Pour s'assurer que le texte des légendes reste visible */
-.carousel-caption {
-    z-index: 5;
-    color: #fff;
-}
-
-
-
-/*
-###################### ABOUT #################
-*/
-
-.about-us-container {
-  background-color: #FF6F1E; /* Orange de fond */
-  color: white;
-  height: 100vh; /* Occupe toute la hauteur de l'écran */
-}
-
-.about-us-heading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.about-us-title {
-  font-size: 4rem; /* Taille du texte principal (responsive) */
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-.about-us-subtitle {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  max-width: 800px;
-}
-
-@media (max-width: 768px) {
-  .about-us-title {
-    font-size: 2.5rem; /* Taille du texte réduite pour les petits écrans */
-  }
-
-  .about-us-subtitle {
-    font-size: 1rem;
-    padding: 0 15px;
-  }
-}
-
-.about-us-container {
-    background-color: #FF6F1E;
-    /* Orange de fond */
-    color: white;
-    height: 100vh;
-    /* Occupe toute la hauteur de l'écran */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* Aligne les sections en haut, au milieu, et en bas */
-}
-
-.about-us-header {
-    margin-top: 20px;
-    /* Titre en haut de la page */
-    text-align: center;
-}
-
-.about-us-heading {
-    font-size: 5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.about-us-main {
-    flex-grow: 1;
-    /* Laisse cette section prendre l'espace au milieu */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-us-title {
-    font-size: 3rem;
-    /* Taille du texte principal */
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.about-us-footer {
-    text-align: center;
-    padding-bottom: 20px;
-    /* Un peu d'espace avant le bas de la page */
-}
-
-.about-us-subtitle {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 @media (max-width: 768px) {
     .about-us-title {
@@ -294,46 +521,7 @@
         font-size: 1rem;
         padding: 0 15px;
     }
-}
 
-
-/*
-###################### CLIENTS #################
-*/
-
-.client-page {
-    background-color: #ffffff;
-    /* Fond blanc */
-    height: 100vh;
-    /* Occupe toute la hauteur de l'écran */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.client-header {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.client-title {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-}
-
-.client-logos {
-    margin-top: 50px;
-}
-
-.client-logo {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
-
-@media (max-width: 768px) {
     .client-title {
         font-size: 3rem;
     }
@@ -341,75 +529,11 @@
     .client-logo {
         max-width: 80%;
     }
-
 }
 
-
-
-/* Le conteneur principal du carrousel */
-.carousel-container {
-    position: relative;
-    height: 100vh;
-    /* Occupe toute la hauteur de la fenêtre */
-    overflow: hidden;
-}
-
-/* Le carrousel doit occuper toute la hauteur */
-.carousel-fullscreen {
-    height: 100vh;
-}
-
-/* L'image du carrousel doit couvrir toute la hauteur et la largeur */
-.carousel-image {
-    height: 100vh;
-    object-fit: cover;
-    /* Couvre l'écran sans distorsion */
-}
-
-/* Positionner la navbar au-dessus du carrousel */
-.navbar-overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    /* Assure que le Navbar est au-dessus du carrousel */
-}
-
-/* Pour s'assurer que le texte des légendes reste visible */
-.carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    z-index: 5;
-    color: #fff;
-    transform: translateY(-50%);
-    text-align: left;
-}
-
-.carousel-caption h1 {
-    font-size: 4rem;
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: "Space Grotesk",
-            sans-serif;
-    font-weight: bold;
-    color: #ffffff;
-    line-height: 1.2;
-    /* Espacement entre les lignes */
-}
-
-.whatsapp-button {
-    margin-top: 20px;
-    
-}
-
-/* font-family: "Space Grotesk",
-sans-serif;
-font-optical-sizing: auto;
-font-weight: <weight>;
-font-style: normal; */
 
 @media (max-width: 992px) {
-    .icon-text-wrapper{
+    .contact-wrapper .icon-text-wrapper{
         margin-bottom: 1.7em;
     }
 }
