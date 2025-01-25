@@ -4,9 +4,10 @@ import './Styles.css';
 
 const Card = ({ data }) => {
     const { title, text ,image } = data
-    return (
+  return (
+      <div className="card-container">
         <CardBS className='card-wrapper' style={{ width: '18rem' }}>
-          <div>
+          <div >
             <img className='img' src={ image } alt='Imagem de serviço' />
             <CardBS.Body>
                 <CardBS.Title>{ title }</CardBS.Title>
@@ -16,7 +17,13 @@ const Card = ({ data }) => {
                 <Button text="Ver serviço" color="light"/>
             </CardBS.Body>
           </div>
-        </CardBS>
+      </CardBS>
+      {/* <div className="card-legend">
+        <h5>{title}</h5>
+        <p>{text}</p>
+      </div> */}
+      </div>
+      
       );
   };
   

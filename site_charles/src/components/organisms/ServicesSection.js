@@ -38,7 +38,9 @@ const Service = () => {
           
           <Row>
             { data.map((item, index) => (
-                <Col className='col-card' key= {index}> <Card data= { item } /> </Col>
+                <Col className='col-card' key={index}>
+                    <Card data={item} />
+                </Col>
             ))}
             
           </Row>
