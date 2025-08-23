@@ -37,10 +37,38 @@ const Orcamentos = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 5000);
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      try {
+        // Monta query string para GET
+        const queryString = new URLSearchParams(formData).toString();
+        const url = `https://script.google.com/macros/s/AKfycbw92G-dxc6hoDR85PjOgISEyIXM8Ye3XTZee8jGnpprq0IvU9hwWvckUmgj5BN1DcOw/exec?${queryString}`;
+
+        const response = await fetch(url, { method: "GET" });
+        const result = await response.json();
+
+        if(result.status === "ok") {
+          setAlertType('success');
+          setShowAlert(true);
+          setFormData({
+           nome: '',
+          email: '',
+          telefone: '',
+          empresa: '',
+          tipoServico: '',
+          descricao: '',
+          prazo: ''
+          });
+        } else {
+          setShowAlert(true);
+        }
+      } catch (error) {
+
+        setShowAlert(true);
+      } finally {
+        setTimeout(() => setShowAlert(false), 5000);
+      }
   };
 
   return (
