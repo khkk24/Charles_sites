@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Blue gradient for the square background -->
+    <linearGradient id="faviconBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a8db8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3f6b8c;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Orange gradient for lightning -->
+    <linearGradient id="faviconOrangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f7931e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Blue rounded square background -->
+  <rect x="2" y="2" width="28" height="28" rx="4" ry="4" fill="url(#faviconBlueGradient)" stroke="#fff" stroke-width="1"/>
+  
+  <!-- Small recycling arrows -->
+  <path d="M22 8 L26 8 L24 6" stroke="#5a8db8" stroke-width="1" fill="none"/>
+  <path d="M6 24 L6 28 L8 26" stroke="#5a8db8" stroke-width="1" fill="none"/>
+  
+  <!-- Orange lightning bolt -->
+  <path d="M12 24 L20 12 L17 12 L23 8 L15 20 L18 20 Z" fill="url(#faviconOrangeGradient)" stroke="#fff" stroke-width="0.5"/>
+</svg>

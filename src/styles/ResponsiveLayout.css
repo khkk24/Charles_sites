@@ -1,0 +1,121 @@
+/* Responsive Layout for Extra Large Screens */
+
+/* Full width container for XL screens */
+.full-width-xl {
+  width: 100%;
+  max-width: none !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Apply full width only on extra large screens */
+@media (min-width: 1400px) {
+  .container,
+  .container-fluid,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: none !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Specific sections that should use full width */
+  .hero-section .container,
+  .services-section .container,
+  .contact-content .container,
+  .footer-content .container,
+  .about-section .container,
+  .team-section .container,
+  .blog-section .container {
+    max-width: none !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+  
+  /* Ensure content spreads across full width */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .col,
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+  .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+  .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+  .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+  .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+  .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+  .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
+  .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12,
+  .col-xxl, .col-xxl-1, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6,
+  .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-10, .col-xxl-11, .col-xxl-12 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Hero sections should be extra wide */
+  .hero-section,
+  .page-header,
+  .contact-header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Cards and content should have proper spacing */
+  .card,
+  .service-card,
+  .team-card,
+  .blog-card {
+    margin-bottom: 2rem;
+  }
+  
+  /* Service grid adjustments */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  /* Team grid adjustments */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  /* Footer adjustments */
+  .site-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Ultra wide screens (2560px+) */
+@media (min-width: 2560px) {
+  .container,
+  .container-fluid {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+  
+  .hero-section .container,
+  .services-section .container,
+  .contact-content .container,
+  .footer-content .container {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+}
+
+/* Large screens but not XL - keep some limits */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1320px !important;
+  }
+}
