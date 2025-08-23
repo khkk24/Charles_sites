@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
-import { BsLightning, BsSun, BsShield, BsTools, BsUmbrella, BsArrowRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { 
+  BsLightning, BsSun, BsShield, BsTools, BsUmbrella, BsArrowRight, 
+  BsHouse, BsBuilding, BsGear, BsFire, BsWifi, BsThermometer,
+  BsBattery, BsLightbulb, BsFileText, BsPeople
+} from 'react-icons/bs';
 import SEO from './SEO';
 import '../styles/Services.css';
 
@@ -27,55 +32,55 @@ const Services = () => {
     {
       id: 1,
       icon: <BsLightning size={50} />,
-      title: 'Projetos e Instalações Elétricas',
-      description: 'Desenvolvemos projetos elétricos completos e realizamos instalações seguras e eficientes para residências, edifícios comerciais e indústrias.',
+      title: 'Elétrica Residencial, Predial, Industrial e Hospitalar',
+      description: 'Projetos e instalações elétricas completas para residências, prédios, indústrias e estabelecimentos hospitalares/clínicas com total segurança.',
       features: [
         'Projeto elétrico residencial e comercial',
-        'Instalação de quadros elétricos',
-        'Cabeamento estruturado',
-        'Adequação às normas ABNT'
+        'Instalação predial e industrial',
+        'Sistemas hospitalares especializados',
+        'Adequação às normas ABNT e NRs'
       ],
       image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       color: 'primary'
     },
     {
       id: 2,
-      icon: <BsTools size={50} />,
-      title: 'Manutenção Elétrica Residencial/Industrial',
-      description: 'Serviços de manutenção preventiva e corretiva para garantir o funcionamento seguro e eficiente dos seus sistemas elétricos.',
-      features: [
-        'Manutenção preventiva',
-        'Correção de problemas elétricos',
-        'Troca de componentes',
-        'Inspeção de segurança'
-      ],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-      color: 'success'
-    },
-    {
-      id: 3,
       icon: <BsSun size={50} />,
-      title: 'Sistemas Fotovoltaicos',
-      description: 'Instalação de sistemas de energia solar fotovoltaica para residências e empresas, proporcionando economia e sustentabilidade.',
+      title: 'Sistema de Energia Fotovoltaica',
+      description: 'Instalação de sistemas de energia solar fotovoltaica residencial, empresarial e usinas fotovoltaicas para economia e sustentabilidade.',
       features: [
-        'Projeto de sistema solar',
-        'Instalação de painéis solares',
-        'Conexão à rede elétrica',
-        'Monitoramento de energia'
+        'Energia solar residencial',
+        'Sistemas empresariais',
+        'Usinas fotovoltaicas',
+        'Monitoramento e economia'
       ],
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       color: 'warning'
     },
     {
+      id: 3,
+      icon: <BsHouse size={50} />,
+      title: 'Automação Residencial',
+      description: 'Casa inteligente com comando de voz, controle automatizado e sistemas integrados para maior conforto e praticidade.',
+      features: [
+        'Casa inteligente',
+        'Comando de voz',
+        'Controle automatizado',
+        'Integração de sistemas'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'info'
+    },
+    {
       id: 4,
       icon: <BsShield size={50} />,
-      title: 'Segurança Eletrônica',
-      description: 'Sistemas completos de segurança eletrônica incluindo câmeras de vigilância, alarmes e controle de acesso.',
+      title: 'Sistema de Segurança Eletrônica',
+      description: 'Sistemas completos de segurança incluindo alarmes, cerca elétrica, câmeras de segurança e outros dispositivos de proteção.',
       features: [
-        'Câmeras de segurança',
         'Sistemas de alarme',
-        'Controle de acesso',
-        'Monitoramento remoto'
+        'Cerca elétrica',
+        'Câmeras de segurança',
+        'Monitoramento 24h'
       ],
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       color: 'danger'
@@ -83,8 +88,8 @@ const Services = () => {
     {
       id: 5,
       icon: <BsUmbrella size={50} />,
-      title: 'SPDA (Proteção contra Descargas Atmosféricas)',
-      description: 'Instalação e manutenção de sistemas de proteção contra raios e descargas atmosféricas para proteção de edificações.',
+      title: 'SPDA - Proteção contra Descargas Atmosféricas',
+      description: 'Instalação e manutenção de sistemas de proteção contra raios e descargas atmosféricas para proteção completa de edificações.',
       features: [
         'Projeto de SPDA',
         'Instalação de para-raios',
@@ -92,6 +97,104 @@ const Services = () => {
         'Certificação e laudo técnico'
       ],
       image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'success'
+    },
+    {
+      id: 6,
+      icon: <BsFire size={50} />,
+      title: 'Prevenção a Incêndio',
+      description: 'Sistemas de prevenção e combate a incêndios com detectores, alarmes e equipamentos de segurança conforme normas técnicas.',
+      features: [
+        'Detectores de fumaça',
+        'Sistemas de alarme',
+        'Equipamentos de combate',
+        'Conformidade com normas'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'danger'
+    },
+    {
+      id: 7,
+      icon: <BsWifi size={50} />,
+      title: 'Rede e Cabeamento Estruturado',
+      description: 'Instalação de redes de dados e cabeamento estruturado para empresas, oferecendo conectividade eficiente e organizada.',
+      features: [
+        'Cabeamento estruturado',
+        'Redes de dados',
+        'Infraestrutura de TI',
+        'Conectividade empresarial'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'primary'
+    },
+    {
+      id: 8,
+      icon: <BsThermometer size={50} />,
+      title: 'Ar Condicionado / Climatização',
+      description: 'Projeto, instalação e manutenção de sistemas de ar condicionado e climatização residencial, comercial e industrial.',
+      features: [
+        'Climatização residencial',
+        'Sistemas comerciais',
+        'Climatização industrial',
+        'Manutenção especializada'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'info'
+    },
+    {
+      id: 9,
+      icon: <BsBuilding size={50} />,
+      title: 'Subestação de Média e Alta Tensão',
+      description: 'Projeto, instalação e manutenção de subestações de média e alta tensão com manutenção preventiva, preditiva e corretiva.',
+      features: [
+        'Projeto de subestação',
+        'Instalação especializada',
+        'Manutenção preventiva',
+        'Manutenção preditiva e corretiva'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'warning'
+    },
+    {
+      id: 10,
+      icon: <BsBattery size={50} />,
+      title: 'Nobreak e Grupo Gerador',
+      description: 'Dimensionamento e instalação de sistemas Nobreak e Grupos Geradores de energia elétrica para residências, empresas e indústrias.',
+      features: [
+        'Nobreak residencial e empresarial',
+        'Grupos geradores',
+        'Dimensionamento técnico',
+        'Instalação completa'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'success'
+    },
+    {
+      id: 11,
+      icon: <BsFileText size={50} />,
+      title: 'Laudos Técnicos',
+      description: 'Elaboração de laudos técnicos especializados e documentação técnica para conformidade e certificação de instalações elétricas.',
+      features: [
+        'Laudos técnicos especializados',
+        'Documentação técnica',
+        'Certificações',
+        'Conformidade com normas'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'secondary'
+    },
+    {
+      id: 12,
+      icon: <BsPeople size={50} />,
+      title: 'Consultoria e Treinamento',
+      description: 'Serviços de consultoria especializada e treinamentos técnicos para equipes e empresas do setor elétrico.',
+      features: [
+        'Consultoria especializada',
+        'Treinamentos técnicos',
+        'Capacitação de equipes',
+        'Assessoria técnica'
+      ],
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       color: 'info'
     }
   ];
@@ -169,6 +272,8 @@ const Services = () => {
                         Saiba Mais <BsArrowRight className="ms-1" />
                       </Button>
                       <Button 
+                        as={Link}
+                        to={`/orcamentos?servico=${encodeURIComponent(service.title)}`}
                         variant={service.color} 
                         size="sm"
                         className="contact-btn"
@@ -348,6 +453,148 @@ const Services = () => {
         </Container>
       </section>
 
+      {/* Certification and Professional Section */}
+      <section className="certification-section py-5">
+        <Container>
+          <Row className="text-center mb-5">
+            <Col lg={10} className="mx-auto">
+              <h2 className="mb-4">Qualidade e Certificação Garantidas</h2>
+              <div className="certification-content">
+                <p className="lead mb-4">
+                  Todos os serviços prestados pela <strong>EngEnigma Instalações Elétricas e Manutenção</strong> 
+                  são executados por profissionais certificados e qualificados, sempre seguindo todos os 
+                  critérios técnicos de acordo com as Normas Regulamentadoras vigentes.
+                </p>
+                
+                <div className="highlight-box slide-element">
+                  <div className="certification-badge mb-3">
+                    <BsShield size={60} className="text-primary" />
+                  </div>
+                  <h4 className="text-primary mb-3">Empresa Registrada no CREA-PR</h4>
+                  <p className="mb-0">
+                    Somos uma empresa com <strong>Registro no Conselho Regional de Engenharia 
+                    e Agronomia do Estado do Paraná - CREA-PR</strong>, garantindo a conformidade 
+                    técnica e legal de todos os nossos serviços.
+                  </p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          
+          <Row className="mt-5">
+            <Col md={4} className="text-center mb-4">
+              <div className="quality-item slide-element">
+                <div className="quality-icon mb-3">
+                  <BsFileText size={40} className="text-success" />
+                </div>
+                <h5>Normas Técnicas</h5>
+                <p>Seguimos rigorosamente todas as Normas Regulamentadoras e ABNT</p>
+              </div>
+            </Col>
+            <Col md={4} className="text-center mb-4">
+              <div className="quality-item slide-element">
+                <div className="quality-icon mb-3">
+                  <BsPeople size={40} className="text-primary" />
+                </div>
+                <h5>Profissionais Certificados</h5>
+                <p>Equipe qualificada e certificada para todos os tipos de serviços</p>
+              </div>
+            </Col>
+            <Col md={4} className="text-center mb-4">
+              <div className="quality-item slide-element">
+                <div className="quality-icon mb-3">
+                  <BsShield size={40} className="text-warning" />
+                </div>
+                <h5>Registro CREA-PR</h5>
+                <p>Empresa devidamente registrada no Conselho de Engenharia do Paraná</p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="contact-info-section py-5 bg-light">
+        <Container>
+          <Row className="text-center mb-4">
+            <Col>
+              <h2 className="mb-4">Entre em Contato</h2>
+              <p className="text-muted">
+                Estamos prontos para atender suas necessidades com qualidade e eficiência
+              </p>
+            </Col>
+          </Row>
+          
+          <Row className="justify-content-center">
+            <Col lg={8}>
+              <div className="contact-grid">
+                <Row>
+                  <Col md={6} className="mb-4">
+                    <div className="contact-card slide-element">
+                      <div className="contact-icon mb-3">
+                        <BsLightbulb size={40} className="text-primary" />
+                      </div>
+                      <h5>Website</h5>
+                      <p className="mb-0">
+                        <a href="https://engenigmainstalacoeseletricas.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="text-decoration-none">
+                          engenigmainstalacoeseletricas.com
+                        </a>
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={6} className="mb-4">
+                    <div className="contact-card slide-element">
+                      <div className="contact-icon mb-3">
+                        <BsTools size={40} className="text-success" />
+                      </div>
+                      <h5>E-mail de Serviços</h5>
+                      <p className="mb-0">
+                        <a href="mailto:servicos@engenigmainstalacoeseletricas.com" 
+                           className="text-decoration-none">
+                          servicos@engenigmainstalacoeseletricas.com
+                        </a>
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={6} className="mb-4">
+                    <div className="contact-card slide-element">
+                      <div className="contact-icon mb-3">
+                        <BsLightning size={40} className="text-warning" />
+                      </div>
+                      <h5>Telefone</h5>
+                      <p className="mb-0">
+                        <a href="tel:+554130459287" className="text-decoration-none">
+                          (41) 3045-9287
+                        </a>
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={6} className="mb-4">
+                    <div className="contact-card slide-element">
+                      <div className="contact-icon mb-3">
+                        <BsShield size={40} className="text-info" />
+                      </div>
+                      <h5>WhatsApp</h5>
+                      <p className="mb-0">
+                        <a href="https://wa.me/5541995226237" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="text-decoration-none">
+                          (41) 99522-6237
+                        </a>
+                      </p>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
       {/* CTA Section */}
       <section className="services-cta py-5">
         <Container>
@@ -360,10 +607,23 @@ const Services = () => {
                   e eficiência. Entre em contato para um orçamento personalizado.
                 </p>
                 <div className="cta-buttons">
-                  <Button variant="primary" size="lg" className="me-3">
+                  <Button 
+                    as={Link}
+                    to="/orcamentos"
+                    variant="primary" 
+                    size="lg" 
+                    className="me-3"
+                  >
                     Solicitar Orçamento
                   </Button>
-                  <Button variant="outline-primary" size="lg">
+                  <Button 
+                    as="a"
+                    href="https://wa.me/5541995226237?text=Olá! Gostaria de falar sobre os serviços da Engenigma."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline-primary" 
+                    size="lg"
+                  >
                     Falar no WhatsApp
                   </Button>
                 </div>

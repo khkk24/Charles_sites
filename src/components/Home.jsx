@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, Carousel, Card, Button } from 'react-bootstrap';
-import { BsLightning, BsSun, BsShield, BsTools, BsGraphUp } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { 
+  BsLightning, BsSun, BsShield, BsTools, BsGraphUp, BsHouse, 
+  BsBuilding, BsFire, BsWifi, BsThermometer, BsBattery, 
+  BsFileText, BsPeople, BsUmbrella 
+} from 'react-icons/bs';
 import SEO from './SEO';
 import '../styles/Home.css';
 
@@ -56,23 +61,63 @@ const Home = () => {
   const services = [
     {
       icon: <BsLightning size={40} />,
-      title: 'Instalações Elétricas',
-      description: 'Projetos e instalações elétricas residenciais e industriais'
+      title: 'Elétrica Residencial, Predial e Industrial',
+      description: 'Projetos e instalações elétricas completas para residências, prédios e indústrias'
     },
     {
       icon: <BsSun size={40} />,
-      title: 'Energia Solar',
-      description: 'Sistemas fotovoltaicos para economia e sustentabilidade'
+      title: 'Energia Solar Fotovoltaica',
+      description: 'Sistemas solares residenciais, empresariais e usinas fotovoltaicas'
+    },
+    {
+      icon: <BsHouse size={40} />,
+      title: 'Automação Residencial',
+      description: 'Casa inteligente com comando de voz e sistemas automatizados'
     },
     {
       icon: <BsShield size={40} />,
       title: 'Segurança Eletrônica',
-      description: 'Câmeras, alarmes e sistemas de monitoramento'
+      description: 'Alarmes, cercas elétricas, câmeras e monitoramento 24h'
     },
     {
-      icon: <BsTools size={40} />,
-      title: 'Manutenção',
-      description: 'Manutenção preventiva e corretiva de sistemas elétricos'
+      icon: <BsUmbrella size={40} />,
+      title: 'SPDA',
+      description: 'Proteção contra descargas atmosféricas e para-raios'
+    },
+    {
+      icon: <BsFire size={40} />,
+      title: 'Prevenção a Incêndio',
+      description: 'Sistemas de detecção e combate a incêndios'
+    },
+    {
+      icon: <BsWifi size={40} />,
+      title: 'Rede e Cabeamento',
+      description: 'Cabeamento estruturado e redes de dados empresariais'
+    },
+    {
+      icon: <BsThermometer size={40} />,
+      title: 'Ar Condicionado',
+      description: 'Climatização residencial, comercial e industrial'
+    },
+    {
+      icon: <BsBuilding size={40} />,
+      title: 'Subestações',
+      description: 'Projeto e manutenção de subestações de média e alta tensão'
+    },
+    {
+      icon: <BsBattery size={40} />,
+      title: 'Nobreak e Geradores',
+      description: 'Sistemas de energia de emergência e backup'
+    },
+    {
+      icon: <BsFileText size={40} />,
+      title: 'Laudos Técnicos',
+      description: 'Documentação técnica e certificações especializadas'
+    },
+    {
+      icon: <BsPeople size={40} />,
+      title: 'Consultoria e Treinamento',
+      description: 'Assessoria técnica e capacitação de equipes'
     }
   ];
 
@@ -101,10 +146,21 @@ const Home = () => {
                           <h1 className="hero-title">{item.title}</h1>
                           <p className="hero-description">{item.description}</p>
                           <div className="hero-buttons">
-                            <Button variant="primary" size="lg" className="me-3">
+                            <Button 
+                              as={Link}
+                              to="/services"
+                              variant="primary" 
+                              size="lg" 
+                              className="me-3"
+                            >
                               Nossos Serviços
                             </Button>
-                            <Button variant="outline-light" size="lg">
+                            <Button 
+                              as={Link}
+                              to="/contact"
+                              variant="outline-light" 
+                              size="lg"
+                            >
                               Entre em Contato
                             </Button>
                           </div>
@@ -249,7 +305,12 @@ const Home = () => {
           <Row>
             {services.map((service, index) => (
               <Col lg={3} md={6} className="mb-4" key={index}>
-                <Card className="service-card h-100 fade-element">
+                <Card 
+                  as={Link}
+                  to="/services"
+                  className="service-card h-100 fade-element text-decoration-none"
+                  style={{ cursor: 'pointer' }}
+                >
                   <Card.Body className="text-center">
                     <div className="service-icon mb-3">
                       {service.icon}
@@ -260,6 +321,19 @@ const Home = () => {
                 </Card>
               </Col>
             ))}
+          </Row>
+          <Row className="text-center mt-4">
+            <Col>
+              <Button 
+                as={Link}
+                to="/services"
+                variant="primary" 
+                size="lg" 
+                className="fade-element"
+              >
+                Ver Todos os Serviços
+              </Button>
+            </Col>
           </Row>
         </Container>
       </section>
@@ -272,9 +346,28 @@ const Home = () => {
               <div className="cta-content fade-element">
                 <h2>Precisa de um Orçamento?</h2>
                 <p>Entre em contato conosco e receba um orçamento personalizado</p>
-                <Button variant="primary" size="lg" className="cta-button">
-                  Solicitar Orçamento
-                </Button>
+                <div className="d-flex justify-content-center gap-3 flex-wrap">
+                  <Button 
+                    as={Link}
+                    to="/orcamentos"
+                    variant="primary" 
+                    size="lg" 
+                    className="cta-button"
+                  >
+                    Solicitar Orçamento
+                  </Button>
+                  <Button 
+                    as="a"
+                    href="https://wa.me/5541995226237?text=Olá! Gostaria de conhecer os serviços da Engenigma."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline-primary" 
+                    size="lg" 
+                    className="cta-button"
+                  >
+                    WhatsApp
+                  </Button>
+                </div>
               </div>
             </Col>
           </Row>

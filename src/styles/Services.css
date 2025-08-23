@@ -448,3 +448,184 @@
     gap: 2rem;
   }
 }
+
+/* Certification Section */
+.certification-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.certification-content .lead {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark-color);
+}
+
+.highlight-box {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(13, 110, 253, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.certification-badge {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, rgba(13, 110, 253, 0.1), rgba(0, 188, 212, 0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.quality-item {
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.quality-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.quality-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, rgba(13, 110, 253, 0.1), rgba(0, 188, 212, 0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.quality-item:hover .quality-icon {
+  background: var(--gradient-primary);
+  transform: scale(1.1);
+}
+
+.quality-item:hover .quality-icon svg {
+  color: white !important;
+}
+
+.quality-item h5 {
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--dark-color);
+}
+
+.quality-item p {
+  color: var(--secondary-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+  background: #f8f9fa;
+}
+
+.contact-grid {
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, rgba(13, 110, 253, 0.1), rgba(0, 188, 212, 0.1));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: var(--gradient-primary);
+  transform: scale(1.1);
+}
+
+.contact-card:hover .contact-icon svg {
+  color: white !important;
+}
+
+.contact-card h5 {
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+  color: var(--dark-color);
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+.contact-card a {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: var(--dark-color);
+  text-decoration: underline !important;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+  .highlight-box {
+    padding: 2rem 1.5rem;
+  }
+  
+  .certification-badge {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .quality-item,
+  .contact-card {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quality-icon,
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

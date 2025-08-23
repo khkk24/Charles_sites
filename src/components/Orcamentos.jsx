@@ -1,9 +1,12 @@
 import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 const Orcamentos = () => {
   const { darkMode } = useContext(ThemeContext);
+  const location = useLocation();
+  
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -14,6 +17,18 @@ const Orcamentos = () => {
     prazo: ''
   });
   const [showAlert, setShowAlert] = useState(false);
+
+  // Récupérer le service depuis l'URL et pré-remplir le formulaire
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const servicoParam = searchParams.get('servico');
+    if (servicoParam) {
+      setFormData(prev => ({
+        ...prev,
+        tipoServico: servicoParam
+      }));
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     setFormData({
