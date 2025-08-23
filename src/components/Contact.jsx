@@ -65,34 +65,39 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+ const handleSubmit = async (e) => {
+      e.preventDefault();
+      setLoading(true);
 
-    // Simular envio do formulário
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setAlertType('success');
-      setShowAlert(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      setAlertType('danger');
-      setShowAlert(true);
-    } finally {
-      setLoading(false);
-    }
+      try {
+        // Monta query string para GET
+        const queryString = new URLSearchParams(formData).toString();
+        const url = `https://script.google.com/macros/s/AKfycbzcJPNiUTLZCIv9kgfhAFACqfXKqBprRTzEpM-6lt9Gc677SBRmG_oCnIL4Dt-kaKb3Tg/exec?${queryString}`;
 
-    // Esconder alert após 5 segundos
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 5000);
+        const response = await fetch(url, { method: "GET" });
+        const result = await response.json();
+
+        if(result.status === "ok") {
+          setAlertType('success');
+          setShowAlert(true);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            service: '',
+            message: '',
+          });
+        } else {
+          setAlertType('danger');
+          setShowAlert(true);
+        }
+      } catch (error) {
+        setAlertType('danger');
+        setShowAlert(true);
+      } finally {
+        setLoading(false);
+        setTimeout(() => setShowAlert(false), 5000);
+      }
   };
 
   const openWhatsApp = () => {
