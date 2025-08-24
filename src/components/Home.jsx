@@ -183,9 +183,11 @@ const Home = () => {
               <h2 className="section-title">Bem-vindos à Engenigma</h2>
               <p className="section-description">
                 A <strong>Engenigma Instalações Elétricas & Manutenção LTDA - ME</strong> é uma empresa 
-                especializada em serviços elétricos, fundada em março de 2021 em Curitiba, PR. 
-                Oferecemos soluções completas em projeto, instalação e manutenção elétrica para 
-                residências, edifícios e indústrias.
+                líder em soluções elétricas, estabelecida em março de 2021 em Curitiba, PR. 
+                Com mais de 4 anos de experiência no mercado, oferecemos serviços completos de 
+                projeto, instalação e manutenção elétrica para residências, edifícios comerciais 
+                e complexos industriais. Nossa equipe certificada garante excelência técnica, 
+                segurança e inovação em cada projeto executado.
               </p>
               <div className="company-stats">
                 <div className="stat-item">

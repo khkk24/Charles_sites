@@ -513,83 +513,69 @@ const Services = () => {
         </Container>
       </section>
 
-      {/* Contact Information Section */}
-      <section className="contact-info-section py-5 bg-light">
+      {/* Company Information Section */}
+      <section className="company-info-section py-5 bg-light">
         <Container>
-          <Row className="text-center mb-4">
-            <Col>
-              <h2 className="mb-4">Entre em Contato</h2>
-              <p className="text-muted">
-                Estamos prontos para atender suas necessidades com qualidade e eficiência
-              </p>
-            </Col>
-          </Row>
-          
           <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="contact-grid">
-                <Row>
-                  <Col md={6} className="mb-4">
-                    <div className="contact-card slide-element">
-                      <div className="contact-icon mb-3">
-                        <BsLightbulb size={40} className="text-primary" />
-                      </div>
-                      <h5>Website</h5>
-                      <p className="mb-0">
-                        <a href="https://engenigmainstalacoeseletricas.com" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           className="text-decoration-none">
-                          engenigmainstalacoeseletricas.com
-                        </a>
-                      </p>
+            <Col lg={6} md={8}>
+              <Card className="company-info-card shadow-lg border-0">
+                <Card.Header className="bg-success text-white text-center py-3">
+                  <h4 className="mb-0">Informações da Empresa</h4>
+                </Card.Header>
+                <Card.Body className="p-4">
+                  <div className="company-info-item d-flex align-items-center">
+                    <div className="info-icon-bg bg-light rounded-circle d-flex align-items-center justify-content-center me-3" 
+                         style={{width: '60px', height: '60px', minWidth: '60px'}}>
+                      <BsBuilding size={24} className="text-primary" />
                     </div>
-                  </Col>
-                  <Col md={6} className="mb-4">
-                    <div className="contact-card slide-element">
-                      <div className="contact-icon mb-3">
-                        <BsTools size={40} className="text-success" />
-                      </div>
-                      <h5>E-mail de Serviços</h5>
-                      <p className="mb-0">
-                        <a href="mailto:servicos@engenigmainstalacoeseletricas.com" 
-                           className="text-decoration-none">
-                          servicos@engenigmainstalacoeseletricas.com
-                        </a>
-                      </p>
+                    <div className="flex-grow-1">
+                      <h6 className="mb-1 text-dark fw-bold">Endereço</h6>
+                      <p className="mb-0 text-muted">Curitiba, PR - Brasil</p>
                     </div>
-                  </Col>
-                  <Col md={6} className="mb-4">
-                    <div className="contact-card slide-element">
-                      <div className="contact-icon mb-3">
-                        <BsLightning size={40} className="text-warning" />
-                      </div>
-                      <h5>Telefone</h5>
-                      <p className="mb-0">
-                        <a href="tel:+554130459287" className="text-decoration-none">
+                  </div>
+
+                  <div className="company-info-item d-flex align-items-center">
+                    <div className="info-icon-bg bg-light rounded-circle d-flex align-items-center justify-content-center me-3" 
+                         style={{width: '60px', height: '60px', minWidth: '60px'}}>
+                      <BsLightning size={24} className="text-primary" />
+                    </div>
+                    <div className="flex-grow-1">
+                      <h6 className="mb-1 text-dark fw-bold">Telefone</h6>
+                      <p className="mb-0 text-muted">
+                        <a href="tel:+5541304599287" className="text-decoration-none text-muted">
                           (41) 3045-9287
                         </a>
                       </p>
                     </div>
-                  </Col>
-                  <Col md={6} className="mb-4">
-                    <div className="contact-card slide-element">
-                      <div className="contact-icon mb-3">
-                        <BsShield size={40} className="text-info" />
-                      </div>
-                      <h5>WhatsApp</h5>
-                      <p className="mb-0">
-                        <a href="https://wa.me/5541995226237" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           className="text-decoration-none">
-                          (41) 99522-6237
+                  </div>
+
+                  <div className="company-info-item d-flex align-items-center">
+                    <div className="info-icon-bg bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" 
+                         style={{width: '60px', height: '60px', minWidth: '60px'}}>
+                      <BsTools size={24} className="text-white" />
+                    </div>
+                    <div className="flex-grow-1">
+                      <h6 className="mb-1 text-dark fw-bold">E-mail</h6>
+                      <p className="mb-0 text-muted">
+                        <a href="mailto:servicos@engenigmainstalacoeseletricas.com" className="text-decoration-none text-muted">
+                          servicos@engenigmainstalacoeseletricas.com
                         </a>
                       </p>
                     </div>
-                  </Col>
-                </Row>
-              </div>
+                  </div>
+
+                  <div className="company-info-item d-flex align-items-center">
+                    <div className="info-icon-bg bg-light rounded-circle d-flex align-items-center justify-content-center me-3" 
+                         style={{width: '60px', height: '60px', minWidth: '60px'}}>
+                      <BsGear size={24} className="text-warning" />
+                    </div>
+                    <div className="flex-grow-1">
+                      <h6 className="mb-1 text-dark fw-bold">Horário de Atendimento</h6>
+                      <p className="mb-0 text-muted">Segunda a Sexta: 8:00 - 18:00</p>
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
             </Col>
           </Row>
         </Container>

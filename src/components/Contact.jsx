@@ -297,57 +297,78 @@ const Contact = () => {
                 </Card.Body>
               </Card>
             </Col>
+{/* Contact Info Sidebar */}
+<Col lg={4}>
+  <div className="contact-sidebar">
+    {/* Company Info */}
+    <Card className="contact-info-card mb-4 fade-up-element">
+      <Card.Header className="bg-success text-white">
+        <h5 className="mb-0">Informações da Empresa</h5>
+      </Card.Header>
+      <Card.Body>
 
-            {/* Contact Info Sidebar */}
-            <Col lg={4}>
-              <div className="contact-sidebar">
-                {/* Company Info */}
-                <Card className="contact-info-card mb-4 fade-up-element">
-                  <Card.Header className="bg-success text-white">
-                    <h5 className="mb-0">Informações da Empresa</h5>
-                  </Card.Header>
-                  <Card.Body>
-                    <div className="contact-item">
-                      <div className="contact-icon">
-                        <BsGeoAlt className="text-primary" />
-                      </div>
-                      <div className="contact-details">
-                        <strong>Endereço</strong>
-                        <p>{contactInfo.address}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="contact-item">
-                      <div className="contact-icon">
-                        <BsPhone className="text-success" />
-                      </div>
-                      <div className="contact-details">
-                        <strong>Telefone</strong>
-                        <p>{contactInfo.phone}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="contact-item">
-                      <div className="contact-icon">
-                        <BsEnvelope className="text-info" />
-                      </div>
-                      <div className="contact-details">
-                        <strong>E-mail</strong>
-                        <p>{contactInfo.email}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="contact-item">
-                      <div className="contact-icon">
-                        <BsClock className="text-warning" />
-                      </div>
-                      <div className="contact-details">
-                        <strong>Horário de Atendimento</strong>
-                        <p>{contactInfo.hours}</p>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
+        {/* Endereço */}
+        <div className="contact-item d-flex align-items-start mb-3">
+          <div 
+            className="contact-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+            style={{ width: "50px", height: "50px" }}
+          >
+            <BsGeoAlt size={22} />
+          </div>
+          <div className="contact-details flex-grow-1">
+            <strong className="d-block">Endereço</strong>
+            <p className="mb-0">{contactInfo.address}</p>
+          </div>
+        </div>
+
+        {/* Telefone */}
+        <div className="contact-item d-flex align-items-start mb-3">
+          <div 
+            className="contact-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+            style={{ width: "50px", height: "50px" }}
+          >
+            <BsPhone size={22} />
+          </div>
+          <div className="contact-details flex-grow-1">
+            <strong className="d-block">Telefone</strong>
+            <p className="mb-0">{contactInfo.phone}</p>
+          </div>
+        </div>
+
+        {/* E-mail */}
+        <div className="contact-item d-flex align-items-start mb-3">
+          <div 
+            className="contact-icon bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+            style={{ width: "50px", height: "50px" }}
+          >
+            <BsEnvelope size={22} />
+          </div>
+          <div className="contact-details flex-grow-1">
+            <strong className="d-block">E-mail</strong>
+            <p className="mb-0">{contactInfo.email}</p>
+          </div>
+        </div>
+
+        {/* Horário */}
+        <div className="contact-item d-flex align-items-start">
+          <div 
+            className="contact-icon bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+            style={{ width: "50px", height: "50px" }}
+          >
+            <BsClock size={22} />
+          </div>
+          <div className="contact-details flex-grow-1">
+            <strong className="d-block">Horário de Atendimento</strong>
+            <p className="mb-0">{contactInfo.hours}</p>
+          </div>
+        </div>
+
+      </Card.Body>
+    </Card>
+
+
+
+
 
                 {/* Company Details */}
                 <Card className="company-details-card mb-4 fade-up-element">
