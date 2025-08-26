@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Container, Row, Col, Card, Form, Button, Alert, 
-  InputGroup, Spinner 
+  InputGroup, Spinner, Modal 
 } from 'react-bootstrap';
 import { 
   BsEnvelope, BsPhone, BsGeoAlt, BsClock, 
-  BsPerson, BsChat, BsWhatsapp, BsInstagram, BsFacebook 
+  BsPerson, BsChat, BsWhatsapp, BsInstagram, BsFacebook,
+  BsCheckCircle, BsXCircle 
 } from 'react-icons/bs';
 import SEO from './SEO';
 import '../styles/Contact.css';
@@ -21,6 +22,9 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState('success');
+  const [showModal, setShowModal] = useState(false);
+  const [modalType, setModalType] = useState('success');
+  const [modalMessage, setModalMessage] = useState('');
 
   const services = [
     'Instalações Elétricas',
@@ -32,7 +36,7 @@ const Contact = () => {
   ];
 
   const contactInfo = {
-    address: 'Curitiba, PR - Brasil',
+    address: 'Av. Mal. Floriano Peixoto, 9986 - Boqueirão, Curitiba - PR, 81670-000',
     phone: '(41) 3045-9287',
     email: 'servicos@engenigmainstalacoeseletricas.com',
     whatsapp: '5541995226237',
@@ -78,8 +82,7 @@ const Contact = () => {
         const result = await response.json();
 
         if(result.status === "ok") {
-          setAlertType('success');
-          setShowAlert(true);
+          // Limpar formulário
           setFormData({
             name: '',
             email: '',
@@ -87,11 +90,30 @@ const Contact = () => {
             service: '',
             message: '',
           });
+          
+          // Mostrar modal de sucesso
+          setModalType('success');
+          setModalMessage('Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.');
+          setShowModal(true);
+          
+          // Manter alerta antigo também
+          setAlertType('success');
+          setShowAlert(true);
         } else {
+          // Mostrar modal de erro
+          setModalType('error');
+          setModalMessage('Erro ao enviar mensagem. Tente novamente ou entre em contato via WhatsApp.');
+          setShowModal(true);
+          
           setAlertType('danger');
           setShowAlert(true);
         }
       } catch (error) {
+        // Mostrar modal de erro
+        setModalType('error');
+        setModalMessage('Erro ao enviar mensagem. Verifique sua conexão e tente novamente.');
+        setShowModal(true);
+        
         setAlertType('danger');
         setShowAlert(true);
       } finally {
@@ -330,8 +352,17 @@ const Contact = () => {
             <BsPhone size={22} />
           </div>
           <div className="contact-details flex-grow-1">
-            <strong className="d-block">Telefone</strong>
-            <p className="mb-0">{contactInfo.phone}</p>
+            <strong className="d-block">Telefones</strong>
+            <p className="mb-1">
+              <a href="tel:+554130459287" className="text-decoration-none text-muted">
+                (41) 3045-9287
+              </a>
+            </p>
+            <p className="mb-0">
+              <a href="tel:+5541995226237" className="text-decoration-none text-muted">
+                (41) 995226237
+              </a>
+            </p>
           </div>
         </div>
 
@@ -442,7 +473,7 @@ const Contact = () => {
                 <Card.Body className="p-0">
                   <div className="maps-container">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115681.72853347695!2d-49.364912837109356!3d-25.494712484375954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce35351cdb3dd%3A0x6d2f6ba5bacbe809!2sCuritiba%2C%20PR!5e0!3m2!1spt!2sbr!4v1642000000000!5m2!1spt!2sbr"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.6858333333335!2d-49.26555555555556!3d-25.42611111111111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4e5e4e5e4e5%3A0x123456789abcdef!2sAv.%20Mal.%20Floriano%20Peixoto%2C%209986%20-%20Boqueir%C3%A3o%2C%20Curitiba%20-%20PR%2C%2081670-000!5e0!3m2!1spt!2sbr!4v1692000000000!5m2!1spt!2sbr"
                       width="100%"
                       height="400"
                       style={{ border: 0 }}
@@ -466,20 +497,113 @@ const Contact = () => {
               <div className="emergency-contact fade-up-element">
                 <h3 className="text-danger mb-3">Emergência Elétrica?</h3>
                 <p>Para situações de emergência, entre em contato imediatamente</p>
-                <Button 
-                  variant="danger" 
-                  size="lg" 
-                  onClick={openWhatsApp}
-                  className="emergency-btn"
-                >
-                  <BsPhone className="me-2" />
-                  Ligar Agora: {contactInfo.phone}
-                </Button>
+                <div className="d-flex gap-2 flex-column flex-md-row">
+                  <Button 
+                    variant="danger" 
+                    size="lg" 
+                    as="a"
+                    href="tel:+554130459287"
+                    className="emergency-btn flex-grow-1"
+                  >
+                    <BsPhone className="me-2" />
+                    (41) 3045-9287
+                  </Button>
+                  <Button 
+                    variant="outline-danger" 
+                    size="lg" 
+                    onClick={openWhatsApp}
+                    className="emergency-btn flex-grow-1"
+                  >
+                    <BsPhone className="me-2" />
+                    (41) 995226237
+                  </Button>
+                </div>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
+
+      {/* Modal de Confirmação */}
+      <Modal 
+        show={showModal} 
+        onHide={() => setShowModal(false)} 
+        centered
+        size="md"
+        className="confirmation-modal"
+      >
+        <Modal.Header closeButton className={modalType === 'success' ? 'bg-success text-white' : 'bg-danger text-white'}>
+          <Modal.Title className="d-flex align-items-center">
+            {modalType === 'success' ? (
+              <>
+                <BsCheckCircle className="me-2" size={24} />
+                Mensagem Enviada!
+              </>
+            ) : (
+              <>
+                <BsXCircle className="me-2" size={24} />
+                Erro no Envio
+              </>
+            )}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center p-4">
+          <div className={`confirmation-icon mb-3 ${modalType === 'success' ? 'text-success' : 'text-danger'}`}>
+            {modalType === 'success' ? (
+              <BsCheckCircle size={60} />
+            ) : (
+              <BsXCircle size={60} />
+            )}
+          </div>
+          <p className="lead mb-3">{modalMessage}</p>
+          {modalType === 'success' && (
+            <div className="success-details">
+              <p className="text-muted small">
+                Nossa equipe analisará sua solicitação e retornará em até 24 horas úteis.
+              </p>
+            </div>
+          )}
+          {modalType === 'error' && (
+            <div className="error-alternatives mt-3">
+              <p className="text-muted small mb-3">
+                Você também pode entrar em contato pelos meios alternativos:
+              </p>
+              <div className="d-flex gap-2 justify-content-center">
+                <Button 
+                  variant="outline-success" 
+                  size="sm"
+                  onClick={() => {
+                    openWhatsApp();
+                    setShowModal(false);
+                  }}
+                >
+                  <BsWhatsapp className="me-1" />
+                  WhatsApp
+                </Button>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm"
+                  as="a"
+                  href="tel:+554130459287"
+                  onClick={() => setShowModal(false)}
+                >
+                  <BsPhone className="me-1" />
+                  Telefone
+                </Button>
+              </div>
+            </div>
+          )}
+        </Modal.Body>
+        <Modal.Footer className="justify-content-center">
+          <Button 
+            variant={modalType === 'success' ? 'success' : 'secondary'} 
+            onClick={() => setShowModal(false)}
+            size="lg"
+          >
+            {modalType === 'success' ? 'Entendi!' : 'Fechar'}
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };

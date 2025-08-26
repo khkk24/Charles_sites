@@ -12,7 +12,7 @@ const SiteFooter = () => {
   const currentYear = new Date().getFullYear();
 
   const contactInfo = {
-    address: 'Curitiba, PR - Brasil',
+    address: 'Av. Mal. Floriano Peixoto, 9986 - Boqueirão, Curitiba - PR, 81670-000',
     phone: '(41) 3045-9287',
     email: 'servicos@engenigmainstalacoeseletricas.com',
     whatsapp: '5541995226237'
@@ -59,7 +59,14 @@ const SiteFooter = () => {
                   </div>
                   <div className="info-item">
                     <BsPhone className="info-icon" />
-                    <span>{contactInfo.phone}</span>
+                    <div className="d-flex flex-column">
+                      <a href="tel:+554130459287" className="text-decoration-none text-light">
+                        (41) 3045-9287
+                      </a>
+                      <a href="tel:+5541995226237" className="text-decoration-none text-light">
+                        (41) 995226237
+                      </a>
+                    </div>
                   </div>
                   <div className="info-item">
                     <BsEnvelope className="info-icon" />

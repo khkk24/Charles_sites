@@ -7,7 +7,7 @@ const WhatsAppFloat = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
 
-  const whatsappNumber = '5541999999999';
+  const whatsappNumber = '5541995226237';
   const defaultMessage = 'Olá! Gostaria de solicitar um orçamento para serviços elétricos.';
 
   useEffect(() => {

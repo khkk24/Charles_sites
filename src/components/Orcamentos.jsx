@@ -1,7 +1,8 @@
-import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button, Alert, Modal } from 'react-bootstrap';
 import { useState, useContext, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ThemeContext } from '../contexts/ThemeContext';
+import { BsCheckCircle, BsXCircle, BsWhatsapp, BsPhone } from 'react-icons/bs';
 
 const Orcamentos = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -17,6 +18,10 @@ const Orcamentos = () => {
     prazo: ''
   });
   const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState('success');
+  const [showModal, setShowModal] = useState(false);
+  const [modalType, setModalType] = useState('success');
+  const [modalMessage, setModalMessage] = useState('');
 
   // Récupérer le service depuis l'URL et pré-remplir le formulaire
   useEffect(() => {
@@ -49,26 +54,52 @@ const Orcamentos = () => {
         const result = await response.json();
 
         if(result.status === "ok") {
+          // Limpar formulário
+          setFormData({
+            nome: '',
+            email: '',
+            telefone: '',
+            empresa: '',
+            tipoServico: '',
+            descricao: '',
+            prazo: ''
+          });
+          
+          // Mostrar modal de sucesso
+          setModalType('success');
+          setModalMessage('Sua solicitação de orçamento foi enviada com sucesso! Nossa equipe entrará em contato em breve.');
+          setShowModal(true);
+          
+          // Manter alerta antigo também
           setAlertType('success');
           setShowAlert(true);
-          setFormData({
-           nome: '',
-          email: '',
-          telefone: '',
-          empresa: '',
-          tipoServico: '',
-          descricao: '',
-          prazo: ''
-          });
         } else {
+          // Mostrar modal de erro
+          setModalType('error');
+          setModalMessage('Erro ao enviar solicitação. Tente novamente ou entre em contato via WhatsApp.');
+          setShowModal(true);
+          
+          setAlertType('danger');
           setShowAlert(true);
         }
       } catch (error) {
-
+        // Mostrar modal de erro
+        setModalType('error');
+        setModalMessage('Erro ao enviar solicitação. Verifique sua conexão e tente novamente.');
+        setShowModal(true);
+        
+        setAlertType('danger');
         setShowAlert(true);
       } finally {
         setTimeout(() => setShowAlert(false), 5000);
       }
+  };
+
+  const openWhatsApp = () => {
+    const message = encodeURIComponent(
+      `Olá! Gostaria de solicitar um orçamento para ${formData.tipoServico || 'serviços elétricos'}.`
+    );
+    window.open(`https://wa.me/5541995226237?text=${message}`, '_blank');
   };
 
   return (
@@ -231,6 +262,87 @@ const Orcamentos = () => {
           </Row>
         </Col>
       </Row>
+
+      {/* Modal de Confirmação */}
+      <Modal 
+        show={showModal} 
+        onHide={() => setShowModal(false)} 
+        centered
+        size="md"
+        className="confirmation-modal"
+      >
+        <Modal.Header closeButton className={modalType === 'success' ? 'bg-success text-white' : 'bg-danger text-white'}>
+          <Modal.Title className="d-flex align-items-center">
+            {modalType === 'success' ? (
+              <>
+                <BsCheckCircle className="me-2" size={24} />
+                Orçamento Solicitado!
+              </>
+            ) : (
+              <>
+                <BsXCircle className="me-2" size={24} />
+                Erro no Envio
+              </>
+            )}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center p-4">
+          <div className={`confirmation-icon mb-3 ${modalType === 'success' ? 'text-success' : 'text-danger'}`}>
+            {modalType === 'success' ? (
+              <BsCheckCircle size={60} />
+            ) : (
+              <BsXCircle size={60} />
+            )}
+          </div>
+          <p className="lead mb-3">{modalMessage}</p>
+          {modalType === 'success' && (
+            <div className="success-details">
+              <p className="text-muted small">
+                Nossa equipe técnica analisará sua solicitação e retornará com um orçamento detalhado em até 24 horas úteis.
+              </p>
+            </div>
+          )}
+          {modalType === 'error' && (
+            <div className="error-alternatives mt-3">
+              <p className="text-muted small mb-3">
+                Você também pode solicitar seu orçamento pelos meios alternativos:
+              </p>
+              <div className="d-flex gap-2 justify-content-center">
+                <Button 
+                  variant="outline-success" 
+                  size="sm"
+                  onClick={() => {
+                    openWhatsApp();
+                    setShowModal(false);
+                  }}
+                >
+                  <BsWhatsapp className="me-1" />
+                  WhatsApp
+                </Button>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm"
+                  as="a"
+                  href="tel:+554130459287"
+                  onClick={() => setShowModal(false)}
+                >
+                  <BsPhone className="me-1" />
+                  Telefone
+                </Button>
+              </div>
+            </div>
+          )}
+        </Modal.Body>
+        <Modal.Footer className="justify-content-center">
+          <Button 
+            variant={modalType === 'success' ? 'success' : 'secondary'} 
+            onClick={() => setShowModal(false)}
+            size="lg"
+          >
+            {modalType === 'success' ? 'Perfeito!' : 'Fechar'}
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };

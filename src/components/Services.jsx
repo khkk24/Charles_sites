@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Container, Row, Col, Card, Button, Badge, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { 
   BsLightning, BsSun, BsShield, BsTools, BsUmbrella, BsArrowRight, 
@@ -11,6 +11,9 @@ import SEO from './SEO';
 import '../styles/Services.css';
 
 const Services = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -29,12 +32,31 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleShowModal = (service) => {
+    setSelectedService(service);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedService(null);
+  };
+
   const services = [
     {
       id: 1,
       icon: <BsLightning size={50} />,
       title: 'Elétrica Residencial, Predial, Industrial e Hospitalar',
       description: 'Projetos e instalações elétricas completas para residências, prédios, indústrias e estabelecimentos hospitalares/clínicas com total segurança.',
+      detailedDescription: `A EngEnigma oferece soluções completas em instalações elétricas para todos os segmentos, sempre priorizando a segurança, eficiência e conformidade com as normas técnicas.
+
+      **Elétrica Residencial:** Executamos projetos elétricos completos para residências, incluindo dimensionamento de quadros de distribuição, circuitos de iluminação, tomadas de uso geral e específico, instalação de chuveiros elétricos, ar-condicionado e sistemas de proteção. Garantimos total segurança familiar e máxima eficiência energética, sempre seguindo as normas ABNT NBR 5410.
+
+      **Elétrica Predial:** Especialistas em edifícios comerciais e residenciais, desenvolvemos e executamos projetos de baixa e média tensão, sistemas de distribuição elétrica, iluminação de emergência, sistemas de CFTV, controle de acesso e toda infraestrutura elétrica necessária para o funcionamento seguro e eficiente do empreendimento.
+
+      **Elétrica Industrial:** Atendemos indústrias com instalações de alta complexidade técnica, incluindo motores de grande porte, sistemas de automação industrial, painéis de comando e controle, subestações, sistemas de aterramento e adequação rigorosa às Normas Regulamentadoras (NRs), especialmente NR-10.
+
+      **Elétrica Hospitalar:** Executamos instalações críticas em hospitais, clínicas e laboratórios que requerem máxima confiabilidade e continuidade de energia. Incluindo sistemas de emergência, grupos geradores, iluminação cirúrgica, sistemas de alimentação ininterrupta (UPS) e total conformidade com normas da ANVISA e ABNT NBR 13534.`,
       features: [
         'Projeto elétrico residencial e comercial',
         'Instalação predial e industrial',
@@ -49,6 +71,15 @@ const Services = () => {
       icon: <BsSun size={50} />,
       title: 'Sistema de Energia Fotovoltaica',
       description: 'Instalação de sistemas de energia solar fotovoltaica residencial, empresarial e usinas fotovoltaicas para economia e sustentabilidade.',
+      detailedDescription: `A EngEnigma é especialista em energia solar fotovoltaica, oferecendo soluções completas e personalizadas para geração de energia limpa, renovável e econômica.
+
+      **Energia Solar Residencial:** Desenvolvemos sistemas fotovoltaicos personalizados para residências, utilizando painéis solares de alta eficiência, inversores de última geração e sistemas de monitoramento em tempo real. Com nossos sistemas, você pode reduzir sua conta de luz em até 95%, além de contribuir para um futuro mais sustentável e valorizar seu imóvel.
+
+      **Sistemas Empresariais:** Oferecemos soluções corporativas que reduzem drasticamente os custos operacionais com energia elétrica. Nossos projetos incluem análise de viabilidade, dimensionamento adequado, instalação completa e acompanhamento da performance, proporcionando retorno do investimento entre 3 a 5 anos e economia contínua por mais de 25 anos.
+
+      **Usinas Fotovoltaicas:** Executamos projetos de grande porte para geração distribuída, incluindo usinas solares comerciais e industriais. Oferecemos gestão completa desde o estudo de viabilidade, projeto executivo, licenciamento, instalação até a operação e manutenção preventiva.
+
+      **Vantagens Exclusivas:** Além da significativa economia na conta de luz, nossos clientes desfrutam de valorização imobiliária, sustentabilidade ambiental, acesso a linhas de financiamento especiais, isenção de impostos e contribuição efetiva para a redução das emissões de CO2.`,
       features: [
         'Energia solar residencial',
         'Sistemas empresariais',
@@ -63,6 +94,17 @@ const Services = () => {
       icon: <BsHouse size={50} />,
       title: 'Automação Residencial',
       description: 'Casa inteligente com comando de voz, controle automatizado e sistemas integrados para maior conforto e praticidade.',
+      detailedDescription: `Transforme sua residência em uma casa verdadeiramente inteligente com nossos sistemas de automação residencial de última geração, proporcionando máximo conforto, segurança e eficiência energética.
+
+      **Casa Inteligente Completa:** Oferecemos integração total de todos os sistemas da casa - iluminação LED inteligente, climatização automatizada, sistema de som ambiente, controle de persianas e cortinas, gestão de energia e muito mais. Tudo funciona de forma sincronizada através de uma única plataforma central.
+
+      **Comando de Voz Avançado:** Compatibilidade completa com assistentes virtuais como Alexa, Google Assistant e Siri. Controle natural e intuitivo: "Ok Google, ative o modo cinema", "Alexa, ajuste a temperatura para 22 graus", "Siri, desligue todas as luzes". A tecnologia a serviço da sua comodidade.
+
+      **Cenários Personalizados:** Programação de rotinas automáticas adaptadas ao seu estilo de vida - modo "Chegando em Casa" (acende luzes, liga ar-condicionado), modo "Saindo de Casa" (desliga tudo, ativa segurança), modo "Dormir" (luzes gradualmente diminuem, temperatura se ajusta), modo "Festa" (iluminação colorida, som ambiente).
+
+      **Controle Total via Smartphone:** Aplicativo exclusivo para controle completo da casa de qualquer lugar do mundo. Monitore consumo de energia, receba notificações de segurança, controle temperatura, iluminação e todos os dispositivos em tempo real, mesmo quando estiver viajando.
+
+      **Eficiência e Economia:** Sistema inteligente de gestão energética que otimiza automaticamente o consumo, reduzindo significativamente sua conta de luz através de algoritmos avançados de machine learning.`,
       features: [
         'Casa inteligente',
         'Comando de voz',
@@ -76,12 +118,23 @@ const Services = () => {
       id: 4,
       icon: <BsShield size={50} />,
       title: 'Sistema de Segurança Eletrônica',
-      description: 'Sistemas completos de segurança incluindo alarmes, cerca elétrica, câmeras de segurança e outros dispositivos de proteção.',
+      description: 'Proteção completa com câmeras de segurança 4K, alarmes inteligentes, controle de acesso biométrico e monitoramento 24h.',
+      detailedDescription: `A EngEnigma oferece as mais avançadas soluções em segurança eletrônica, proporcionando proteção total para residências, empresas e condomínios através de tecnologia de ponta e monitoramento profissional.
+
+      **CFTV 4K Ultra HD:** Sistemas de videomonitoramento com câmeras de altíssima resolução 4K, visão noturna infravermelha até 40 metros, lentes varifocais motorizadas e recursos de inteligência artificial para detecção automática de movimento e reconhecimento facial. Gravação em nuvem e local com backup redundante.
+
+      **Alarmes Inteligentes:** Centrais de alarme conectadas com sensores de movimento PIR duais, sensores magnéticos para portas e janelas, detectores de quebra de vidro e botões de pânico. Sistema com discadora GSM para notificações via SMS e aplicativo móvel com alertas em tempo real.
+
+      **Controle de Acesso Biométrico:** Fechaduras eletrônicas com leitura de digital, reconhecimento facial, cartão de proximidade e senhas. Controle total de horários de acesso, relatórios detalhados e integração com sistema de ponto eletrônico para empresas.
+
+      **Monitoramento 24h:** Central de monitoramento própria com profissionais treinados operando 24 horas por dia, 7 dias por semana. Resposta imediata a eventos, comunicação direta com Polícia Militar e Corpo de Bombeiros quando necessário.
+
+      **Aplicativo Móvel Exclusivo:** Controle total via smartphone - visualização das câmeras em tempo real, ativação/desativação de alarmes, abertura remota de portões, histórico de eventos e notificações push instantâneas.`,
       features: [
-        'Sistemas de alarme',
-        'Cerca elétrica',
-        'Câmeras de segurança',
-        'Monitoramento 24h'
+        'CFTV 4K Ultra HD',
+        'Alarmes inteligentes',
+        'Controle de acesso biométrico',
+        'Monitoramento 24h profissional'
       ],
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       color: 'danger'
@@ -91,6 +144,17 @@ const Services = () => {
       icon: <BsUmbrella size={50} />,
       title: 'SPDA - Proteção contra Descargas Atmosféricas',
       description: 'Instalação e manutenção de sistemas de proteção contra raios e descargas atmosféricas para proteção completa de edificações.',
+      detailedDescription: `A EngEnigma é especialista em Sistemas de Proteção contra Descargas Atmosféricas (SPDA), oferecendo proteção completa contra raios e garantindo a segurança de pessoas, equipamentos e edificações.
+
+      **Projeto Técnico Especializado:** Elaboração de projetos técnicos rigorosamente conforme ABNT NBR 5419, incluindo análise de risco detalhada, cálculos de probabilidade de descargas, dimensionamento preciso do sistema e definição do nível de proteção adequado para cada tipo de edificação específica.
+
+      **Sistema de Captação Avançado:** Instalação profissional de para-raios Franklin, para-raios radioativos (quando aplicável), hastes captoras, cabos condutores de descida em cobre nu, gaiolas de Faraday para proteção interna e todos os componentes dimensionados para máxima eficiência na interceptação de descargas atmosféricas.
+
+      **Aterramento de Alta Performance:** Implementação de sistemas de aterramento de baixa resistência utilizando hastes profundas de alta condutividade, malhas de terra interligadas, tratamento químico do solo quando necessário e medições precisas de resistividade para garantir dissipação segura e eficiente da energia atmosférica.
+
+      **Proteção Contra Surtos (DPS):** Instalação estratégica de Dispositivos de Proteção contra Surtos nos quadros elétricos principais e secundários, proteção específica para equipamentos eletrônicos sensíveis, sistemas de telecomunicações e redes de dados, evitando danos causados por sobretensões induzidas.
+
+      **Certificação e Conformidade:** Emissão de laudos técnicos oficiais, Anotação de Responsabilidade Técnica (ART), certificações exigidas pelo Corpo de Bombeiros, documentação para seguradoras e acompanhamento de inspeções periódicas para manutenção da validade das certificações.`,
       features: [
         'Projeto de SPDA',
         'Instalação de para-raios',
@@ -104,7 +168,18 @@ const Services = () => {
       id: 6,
       icon: <BsFire size={50} />,
       title: 'Prevenção a Incêndio',
-      description: 'Sistemas de prevenção e combate a incêndios com detectores, alarmes e equipamentos de segurança conforme normas técnicas.',
+      description: 'Sistemas completos de prevenção e combate a incêndios com detectores inteligentes, alarmes, sprinklers e equipamentos certificados.',
+      detailedDescription: `A EngEnigma desenvolve e implementa sistemas completos de prevenção e combate a incêndios, garantindo a máxima segurança de vidas e patrimônio através de tecnologia avançada e conformidade total com as normas técnicas.
+
+      **Detecção Inteligente:** Instalação de detectores de fumaça ópticos e iônicos de última geração, detectores de temperatura compensados, detectores de chama infravermelha e ultravioleta, sensores de gases tóxicos e sistemas addressáveis que identificam precisamente o local do sinistro em tempo real.
+
+      **Sistemas de Alarme Avançados:** Centrais de alarme de incêndio certificadas pelo Corpo de Bombeiros, sirenes e sinalizadores visuais de alta potência, acionadores manuais estrategicamente posicionados, comunicação automática com Corpo de Bombeiros e integração com sistemas de automação predial.
+
+      **Sistemas de Combate:** Projeto e instalação de sistemas de sprinklers automáticos (água, espuma, gases limpos), hidrantes internos e externos, bombas de incêndio redundantes, reservatórios técnicos dimensionados, mangueiras e esguichos certificados, extintores adequados para cada classe de risco.
+
+      **Pressurização de Escadas:** Sistemas de pressurização para rotas de fuga em edifícios altos, garantindo que as escadas de emergência permaneçam livres de fumaça durante evacuações, conforme exigências das normas de segurança contra incêndio.
+
+      **Certificação e Manutenção:** Projetos aprovados pelo Corpo de Bombeiros, Auto de Vistoria do Corpo de Bombeiros (AVCB), manutenção preventiva e corretiva de todos os equipamentos, treinamento de brigada de incêndio e planos de emergência personalizados.`,
       features: [
         'Detectores de fumaça',
         'Sistemas de alarme',
@@ -269,6 +344,7 @@ const Services = () => {
                         variant={`outline-${service.color}`} 
                         size="sm"
                         className="learn-more-btn"
+                        onClick={() => handleShowModal(service)}
                       >
                         Saiba Mais <BsArrowRight className="ms-1" />
                       </Button>
@@ -589,7 +665,7 @@ const Services = () => {
                     </div>
                     <div className="flex-grow-1">
                       <h6 className="mb-1 text-dark fw-bold">Endereço</h6>
-                      <p className="mb-0 text-muted">Curitiba, PR - Brasil</p>
+                      <p className="mb-0 text-muted">Av. Mal. Floriano Peixoto, 9986 - Boqueirão, Curitiba - PR, 81670-000</p>
                     </div>
                   </div>
 
@@ -677,6 +753,139 @@ const Services = () => {
           </Row>
         </Container>
       </section>
+
+      {/* Service Details Modal */}
+      <Modal 
+        show={showModal} 
+        onHide={handleCloseModal} 
+        size="xl" 
+        centered
+        className="service-modal"
+        scrollable
+      >
+        <Modal.Header closeButton className={`bg-${selectedService?.color || 'primary'} text-white service-modal-header`}>
+          <Modal.Title className="d-flex align-items-center w-100">
+            <span className="me-3 service-modal-icon" style={{ fontSize: '1.8rem' }}>
+              {selectedService?.icon}
+            </span>
+            <div className="flex-grow-1">
+              <h4 className="mb-0 service-modal-title">{selectedService?.title}</h4>
+            </div>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="p-0">
+          {selectedService && (
+            <div className="service-modal-content">
+              {/* Hero Section */}
+              <div className="service-modal-hero p-4 bg-light">
+                <Row className="align-items-center">
+                  <Col lg={8}>
+                    <p className="lead mb-0 text-dark">
+                      {selectedService.description}
+                    </p>
+                  </Col>
+                  <Col lg={4} className="text-center">
+                    <div className={`service-modal-badge bg-${selectedService.color} text-white p-3 rounded-circle d-inline-flex align-items-center justify-content-center`} 
+                         style={{ width: '80px', height: '80px' }}>
+                      <span style={{ fontSize: '2rem' }}>{selectedService.icon}</span>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-4">
+                <div className="service-description mb-4">
+                  <h5 className={`text-${selectedService.color} mb-3 d-flex align-items-center`}>
+                    <BsFileText className="me-2" />
+                    Descrição Detalhada
+                  </h5>
+                  <div className="detailed-description">
+                    {selectedService.detailedDescription?.split('\n\n').map((section, index) => {
+                      if (section.trim().startsWith('**') && section.trim().includes(':**')) {
+                        const [title, ...content] = section.split(':**');
+                        return (
+                          <div key={index} className="mb-4">
+                            <h6 className={`fw-bold text-${selectedService.color} mb-2`}>
+                              {title.replace(/\*\*/g, '')}
+                            </h6>
+                            <p className="mb-2 text-muted lh-lg">
+                              {content.join(':**').trim()}
+                            </p>
+                          </div>
+                        );
+                      }
+                      return section.trim() && (
+                        <p key={index} className="mb-3 text-muted lh-lg">
+                          {section.trim()}
+                        </p>
+                      );
+                    })}
+                  </div>
+                </div>
+                
+                {/* Features Section */}
+                <div className="service-features mb-4">
+                  <h5 className={`text-${selectedService.color} mb-3 d-flex align-items-center`}>
+                    <BsTools className="me-2" />
+                    Principais Características
+                  </h5>
+                  <Row>
+                    {selectedService.features?.map((feature, index) => (
+                      <Col lg={6} md={12} key={index} className="mb-3">
+                        <div className={`d-flex align-items-center p-2 rounded bg-light border-start border-4 border-${selectedService.color}`}>
+                          <BsArrowRight className={`text-${selectedService.color} me-3 flex-shrink-0`} />
+                          <span className="text-dark">{feature}</span>
+                        </div>
+                      </Col>
+                    ))}
+                  </Row>
+                </div>
+                
+                {/* CTA Section */}
+                <div className={`modal-cta p-4 bg-${selectedService.color} bg-opacity-10 rounded-3 border border-${selectedService.color} border-opacity-25`}>
+                  <Row className="align-items-center">
+                    <Col lg={8} className="mb-3 mb-lg-0">
+                      <h6 className={`text-${selectedService.color} mb-2 d-flex align-items-center`}>
+                        <BsPeople className="me-2" />
+                        Interessado neste serviço?
+                      </h6>
+                      <p className="mb-0 text-muted small">
+                        Entre em contato conosco para um orçamento personalizado
+                      </p>
+                    </Col>
+                    <Col lg={4}>
+                      <div className="d-flex gap-2 flex-column flex-lg-row">
+                        <Button 
+                          as={Link}
+                          to={`/orcamentos?servico=${encodeURIComponent(selectedService.title)}`}
+                          variant={selectedService.color}
+                          size="sm"
+                          className="flex-grow-1"
+                          onClick={handleCloseModal}
+                        >
+                          Solicitar Orçamento
+                        </Button>
+                        <Button 
+                          as="a"
+                          href={`https://wa.me/5541995226237?text=Olá! Gostaria de saber mais sobre ${selectedService.title}.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          variant={`outline-${selectedService.color}`}
+                          size="sm"
+                          className="flex-grow-1"
+                        >
+                          WhatsApp
+                        </Button>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+            </div>
+          )}
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };
