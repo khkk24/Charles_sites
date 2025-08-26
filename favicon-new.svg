@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient pour le bleu -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90a4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c5f7f;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour l'orange -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff7b3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e65100;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Carré bleu avec coins arrondis -->
+  <rect x="2" y="2" width="28" height="28" rx="3" fill="url(#blueGrad)" stroke="#2c5f7f" stroke-width="1"/>
+  
+  <!-- Flèche de recyclage (haut) -->
+  <path d="M24 8 L28 8 L26 6" fill="url(#blueGrad)" stroke="url(#blueGrad)" stroke-width="1"/>
+  
+  <!-- Flèche de recyclage (bas) -->
+  <path d="M8 24 L8 28 L10 26" fill="url(#blueGrad)" stroke="url(#blueGrad)" stroke-width="1"/>
+  
+  <!-- Éclair orange principal -->
+  <path d="M10 28 L20 12 L17 12 L26 6 L16 22 L19 22 Z" fill="url(#orangeGrad)"/>
+  
+  <!-- Lettre "E" stylisée au centre -->
+  <text x="16" y="20" font-family="Arial Black" font-size="12" font-weight="900" fill="white" text-anchor="middle">E</text>
+</svg>
