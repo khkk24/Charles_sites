@@ -17,7 +17,7 @@ import WhatsAppFloat from './components/WhatsAppFloat';
 export default function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/Charles_sites">
         <SiteNavbar />
         <main style={{ paddingTop: '80px', minHeight: '80vh' }}>
           <Routes>
