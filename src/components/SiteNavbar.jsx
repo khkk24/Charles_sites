@@ -26,15 +26,17 @@ const SiteNavbar = () => {
       variant={darkMode ? 'dark' : 'light'}
     >
       <div className="navbar-container-fluid">
-        <Navbar.Brand href="/" className="brand-logo">
-          <img 
-            src={getImagePath("/images/engenigma-logo.jpg")}
-            alt="Engenigma Logo" 
-            height="80"
-            style={{height: "80px"}}
-            className="d-inline-block align-top"
-          />
-        </Navbar.Brand>
+        <LinkContainer to="/">
+          <Navbar.Brand className="brand-logo">
+            <img 
+              src={getImagePath("/images/engenigma-logo.jpg")}
+              alt="Engenigma Logo" 
+              height="80"
+              style={{height: "80px"}}
+              className="d-inline-block align-top"
+            />
+          </Navbar.Brand>
+        </LinkContainer>
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         
