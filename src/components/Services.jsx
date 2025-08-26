@@ -454,6 +454,64 @@ const Services = () => {
         </Container>
       </section>
 
+      {/* Suppliers Section */}
+      <section className="suppliers-section py-5">
+        <Container>
+          <Row className="text-center mb-5">
+            <Col lg={8} className="mx-auto">
+              <h2 className="mb-3">Nossos Fornecedores</h2>
+              <p className="text-muted">
+                Trabalhamos com os melhores fornecedores do mercado para garantir a qualidade dos nossos serviços
+              </p>
+            </Col>
+          </Row>
+          
+          {/* Suppliers Carousel */}
+          <div className="suppliers-carousel-container">
+            <div className="suppliers-carousel">
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier1.png")} alt="Fornecedor 1" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier2.png")} alt="Fornecedor 2" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier3.png")} alt="Fornecedor 3" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier4.png")} alt="Fornecedor 4" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier5.png")} alt="Fornecedor 5" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier6.png")} alt="Fornecedor 6" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier7.png")} alt="Fornecedor 7" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier8.png")} alt="Fornecedor 8" />
+              </div>
+              
+              {/* Duplicate for seamless loop */}
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier1.png")} alt="Fornecedor 1" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier2.png")} alt="Fornecedor 2" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier3.png")} alt="Fornecedor 3" />
+              </div>
+              <div className="supplier-logo">
+                <img src={getImagePath("/images/suppliers/supplier4.png")} alt="Fornecedor 4" />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Certification and Professional Section */}
       <section className="certification-section py-5">
         <Container>
