@@ -6,6 +6,7 @@ import {
   BsBuilding, BsFire, BsWifi, BsThermometer, BsBattery, 
   BsFileText, BsPeople, BsUmbrella 
 } from 'react-icons/bs';
+import getImagePath from '../utils/imagePaths';
 import SEO from './SEO';
 import '../styles/Home.css';
 
@@ -37,7 +38,7 @@ const Home = () => {
       description: 'Projetos elétricos seguros e eficientes para sua residência ou empresa'
     },
     {
-      image: '/images/engenigma-brand-1.jpg',
+      image: getImagePath('/images/engenigma-brand-1.jpg'),
       title: 'Engenigma - Sua Empresa de Confiança',
       description: 'Especialistas em instalações elétricas com anos de experiência e qualidade garantida'
     },
@@ -47,7 +48,7 @@ const Home = () => {
       description: 'Soluções sustentáveis em energia renovável para economia e sustentabilidade'
     },
     {
-      image: '/images/engenigma-brand-2.jpg',
+      image: getImagePath('/images/engenigma-brand-2.jpg'),
       title: 'Excelência em Serviços Elétricos',
       description: 'Nossa equipe qualificada oferece as melhores soluções para suas necessidades elétricas'
     },
@@ -234,7 +235,7 @@ const Home = () => {
             <Col lg={6} className="mb-4">
               <div className="company-showcase-image fade-element">
                 <img 
-                  src="/images/engenigma-brand-1.jpg" 
+                  src={getImagePath("/images/engenigma-brand-1.jpg")}
                   alt="Projetos da Engenigma" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "300px", objectFit: "cover"}}
@@ -260,7 +261,7 @@ const Home = () => {
             <Col lg={6} className="order-lg-2 mb-4">
               <div className="company-showcase-image fade-element">
                 <img 
-                  src="/images/engenigma-brand-2.jpg" 
+                  src={getImagePath("/images/engenigma-brand-2.jpg")}
                   alt="Equipe Engenigma" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "300px", objectFit: "cover"}}

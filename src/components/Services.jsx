@@ -6,6 +6,7 @@ import {
   BsHouse, BsBuilding, BsGear, BsFire, BsWifi, BsThermometer,
   BsBattery, BsLightbulb, BsFileText, BsPeople
 } from 'react-icons/bs';
+import getImagePath from '../utils/imagePaths';
 import SEO from './SEO';
 import '../styles/Services.css';
 
@@ -336,7 +337,7 @@ const Services = () => {
             <Col lg={6} className="mb-4">
               <div className="company-image slide-element">
                 <img 
-                  src="/images/engenigma-brand-1.jpg" 
+                  src={getImagePath("/images/engenigma-brand-1.jpg")}
                   alt="Engenigma - Nossa Empresa" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "400px", objectFit: "cover"}}
@@ -399,54 +400,54 @@ const Services = () => {
           <div className="clients-carousel-container">
             <div className="clients-carousel">
               <div className="client-logo">
-                <img src="/images/clients/lhc.jpg" alt="LHC" />
+                <img src={getImagePath("/images/clients/lhc.jpg")} alt="LHC" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/masterdomus.jpg" alt="Masterdomus" />
+                <img src={getImagePath("/images/clients/masterdomus.jpg")} alt="Masterdomus" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/gnatus.png" alt="Gnatus" />
+                <img src={getImagePath("/images/clients/gnatus.png")} alt="Gnatus" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/curitiba.jpeg" alt="Prefeitura de Curitiba" />
+                <img src={getImagePath("/images/clients/curitiba.jpeg")} alt="Prefeitura de Curitiba" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/sao_jose_pinhais.png" alt="São José dos Pinhais" />
+                <img src={getImagePath("/images/clients/sao_jose_pinhais.png")} alt="São José dos Pinhais" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/sao_bento_sul.png" alt="São Bento do Sul" />
+                <img src={getImagePath("/images/clients/sao_bento_sul.png")} alt="São Bento do Sul" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/client1.png" alt="Cliente" />
+                <img src={getImagePath("/images/clients/client1.png")} alt="Cliente" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/client2.jpeg" alt="Cliente" />
+                <img src={getImagePath("/images/clients/client2.jpeg")} alt="Cliente" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/client3.jpeg" alt="Cliente" />
+                <img src={getImagePath("/images/clients/client3.jpeg")} alt="Cliente" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/client4.png" alt="Cliente" />
+                <img src={getImagePath("/images/clients/client4.png")} alt="Cliente" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/client5.jpg" alt="Cliente" />
+                <img src={getImagePath("/images/clients/client5.jpg")} alt="Cliente" />
               </div>
               
               {/* Duplicate for seamless loop */}
               <div className="client-logo">
-                <img src="/images/clients/lhc.jpg" alt="LHC" />
+                <img src={getImagePath("/images/clients/lhc.jpg")} alt="LHC" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/masterdomus.jpg" alt="Masterdomus" />
+                <img src={getImagePath("/images/clients/masterdomus.jpg")} alt="Masterdomus" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/gnatus.png" alt="Gnatus" />
+                <img src={getImagePath("/images/clients/gnatus.png")} alt="Gnatus" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/curitiba.jpeg" alt="Prefeitura de Curitiba" />
+                <img src={getImagePath("/images/clients/curitiba.jpeg")} alt="Prefeitura de Curitiba" />
               </div>
               <div className="client-logo">
-                <img src="/images/clients/sao_jose_pinhais.png" alt="São José dos Pinhais" />
+                <img src={getImagePath("/images/clients/sao_jose_pinhais.png")} alt="São José dos Pinhais" />
               </div>
             </div>
           </div>

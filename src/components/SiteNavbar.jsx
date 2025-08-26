@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { BsSun, BsMoon } from 'react-icons/bs';
 import { useTheme } from '../contexts/ThemeContext';
+import getImagePath from '../utils/imagePaths';
 import '../styles/SiteNavbar.css';
 
 const SiteNavbar = () => {
@@ -27,7 +28,7 @@ const SiteNavbar = () => {
       <div className="navbar-container-fluid">
         <Navbar.Brand href="/" className="brand-logo">
           <img 
-            src="/images/engenigma-logo.jpg" 
+            src={getImagePath("/images/engenigma-logo.jpg")}
             alt="Engenigma Logo" 
             height="80"
             style={{height: "80px"}}

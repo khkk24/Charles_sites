@@ -1,6 +1,7 @@
 import { Container, Row, Col, Carousel, Card } from 'react-bootstrap';
 import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
+import getImagePath from '../utils/imagePaths';
 
 const QuemSomos = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -36,7 +37,7 @@ const QuemSomos = () => {
             <Carousel.Item>
               <div className="d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <img
-                  src="/images/partners/partner1.png"
+                  src={getImagePath("/images/partners/partner1.png")}
                   alt="Parceiro 1"
                   style={{ maxHeight: '150px', maxWidth: '300px', objectFit: 'contain' }}
                   className="img-fluid"
@@ -46,7 +47,7 @@ const QuemSomos = () => {
             <Carousel.Item>
               <div className="d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <img
-                  src="/images/partners/partner2.png"
+                  src={getImagePath("/images/partners/partner2.png")}
                   alt="Parceiro 2"
                   style={{ maxHeight: '150px', maxWidth: '300px', objectFit: 'contain' }}
                   className="img-fluid"
@@ -56,7 +57,7 @@ const QuemSomos = () => {
             <Carousel.Item>
               <div className="d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <img
-                  src="/images/partners/partner3.png"
+                  src={getImagePath("/images/partners/partner3.png")}
                   alt="Parceiro 3"
                   style={{ maxHeight: '150px', maxWidth: '300px', objectFit: 'contain' }}
                   className="img-fluid"

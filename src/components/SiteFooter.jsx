@@ -5,6 +5,7 @@ import {
   BsFacebook, BsInstagram, BsLinkedin, BsHeart 
 } from 'react-icons/bs';
 import { LinkContainer } from 'react-router-bootstrap';
+import getImagePath from '../utils/imagePaths';
 import '../styles/SiteFooter.css';
 
 const SiteFooter = () => {
@@ -158,7 +159,7 @@ const SiteFooter = () => {
                 <div className="footer-gallery">
                   <div className="gallery-item">
                     <img 
-                      src="/images/engenigma-brand-1.jpg" 
+                      src={getImagePath("/images/engenigma-brand-1.jpg")}
                       alt="Projeto Engenigma 1" 
                       className="gallery-image"
                     />
@@ -168,7 +169,7 @@ const SiteFooter = () => {
                   </div>
                   <div className="gallery-item">
                     <img 
-                      src="/images/engenigma-brand-2.jpg" 
+                      src={getImagePath("/images/engenigma-brand-2.jpg")}
                       alt="Projeto Engenigma 2" 
                       className="gallery-image"
                     />
