@@ -28,11 +28,11 @@ const QuemSomos = () => {
             </Card.Body>
           </Card>
 
-          <h2 className={`text-center mb-4 ${darkMode ? 'text-light' : 'text-dark'}`}>
+          {/* <h2 className={`text-center mb-4 ${darkMode ? 'text-light' : 'text-dark'}`}>
             Nossos Parceiros
-          </h2>
+          </h2> */}
           
-          <Carousel className="mb-5" indicators={false} controls={true}>
+          {/* <Carousel className="mb-5" indicators={false} controls={true}>
             <Carousel.Item>
               <div className="d-flex justify-content-center align-items-center" style={{ height: '200px' }}>
                 <img
@@ -63,7 +63,7 @@ const QuemSomos = () => {
                 />
               </div>
             </Carousel.Item>
-          </Carousel>
+          </Carousel> */}
 
           <Row className="mb-4">
             <Col md={12}>
