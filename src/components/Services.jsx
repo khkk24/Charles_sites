@@ -33,13 +33,17 @@ const Services = () => {
   }, []);
 
   const handleShowModal = (service) => {
+    console.log('handleShowModal called with service:', service);
     setSelectedService(service);
     setShowModal(true);
+    console.log('Modal state set to true');
   };
 
   const handleCloseModal = () => {
+    console.log('handleCloseModal called');
     setShowModal(false);
     setSelectedService(null);
+    console.log('Modal closed');
   };
 
   const services = [
@@ -755,6 +759,7 @@ const Services = () => {
       </section>
 
       {/* Service Details Modal */}
+      {console.log('Modal render - showModal:', showModal, 'selectedService:', selectedService)}
       <Modal 
         show={showModal} 
         onHide={handleCloseModal} 
@@ -762,8 +767,9 @@ const Services = () => {
         centered
         className="service-modal"
         scrollable
+        keyboard={true}
       >
-        <Modal.Header closeButton className={`bg-${selectedService?.color || 'primary'} text-white service-modal-header`}>
+        <Modal.Header className={`bg-${selectedService?.color || 'primary'} text-white service-modal-header`}>
           <Modal.Title className="d-flex align-items-center w-100">
             <span className="me-3 service-modal-icon" style={{ fontSize: '1.8rem' }}>
               {selectedService?.icon}
@@ -772,6 +778,13 @@ const Services = () => {
               <h4 className="mb-0 service-modal-title">{selectedService?.title}</h4>
             </div>
           </Modal.Title>
+          <button
+            type="button"
+            className="btn-close btn-close-white"
+            aria-label="Close"
+            onClick={handleCloseModal}
+            style={{ position: 'relative', zIndex: 10 }}
+          ></button>
         </Modal.Header>
         <Modal.Body className="p-0">
           {selectedService && (
