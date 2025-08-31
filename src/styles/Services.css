@@ -317,6 +317,44 @@
   transform: translateY(-3px);
 }
 
+/* Services CTA Section Buttons */
+.services-cta .btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+  padding: 0.75rem 2rem;
+}
+
+.services-cta .btn-success:hover {
+  background: linear-gradient(135deg, #218838, #1abc9c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.services-cta .btn-warning {
+  background: linear-gradient(135deg, #ffc107, #ff8c00);
+  border: none;
+  color: #212529;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+  padding: 0.75rem 2rem;
+}
+
+.services-cta .btn-warning:hover {
+  background: linear-gradient(135deg, #e0a800, #ff7700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+  color: #212529;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .service-card {
@@ -358,6 +396,7 @@
 .clients-section {
   background: #f8f9fa !important;
   position: relative;
+  overflow: hidden;
 }
 
 .clients-carousel-container {
@@ -365,13 +404,15 @@
   white-space: nowrap;
   position: relative;
   margin: 2rem 0;
+  padding: 1rem 0;
 }
 
 .clients-carousel {
   display: inline-flex;
-  animation: scroll-clients 30s linear infinite;
-  gap: 3rem;
+  animation: scroll-clients-left 25s linear infinite;
+  gap: 2.5rem;
   align-items: center;
+  width: calc(200% + 5rem);
 }
 
 .client-logo {
@@ -387,28 +428,30 @@
   transition: all 0.3s ease;
   overflow: hidden;
   border: 3px solid #e9ecef;
+  position: relative;
 }
 
 .client-logo:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border-color: var(--primary-color);
+  animation-play-state: paused;
 }
 
 .client-logo img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 75%;
+  max-height: 75%;
   object-fit: contain;
-  filter: grayscale(100%);
+  filter: grayscale(70%) brightness(1.1);
   transition: all 0.3s ease;
 }
 
 .client-logo:hover img {
-  filter: grayscale(0%);
+  filter: grayscale(0%) brightness(1);
   transform: scale(1.1);
 }
 
-@keyframes scroll-clients {
+@keyframes scroll-clients-left {
   0% {
     transform: translateX(0);
   }
@@ -421,38 +464,11 @@
   animation-play-state: paused;
 }
 
-@media (max-width: 576px) {
-  .services-header {
-    padding: 3rem 0;
-  }
-  
-  .services-header .page-title {
-    font-size: 2rem;
-  }
-  
-  .benefit-item {
-    padding: 1.5rem;
-  }
-  
-  .benefit-icon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .client-logo {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .clients-carousel {
-    gap: 2rem;
-  }
-}
-
 /* Suppliers Section */
 .suppliers-section {
   background: white !important;
   position: relative;
+  overflow: hidden;
 }
 
 .suppliers-carousel-container {
@@ -460,13 +476,15 @@
   white-space: nowrap;
   position: relative;
   margin: 2rem 0;
+  padding: 1rem 0;
 }
 
 .suppliers-carousel {
   display: inline-flex;
-  animation: scroll-suppliers 35s linear infinite;
-  gap: 3rem;
+  animation: scroll-suppliers-right 30s linear infinite reverse;
+  gap: 2.5rem;
   align-items: center;
+  width: calc(200% + 5rem);
 }
 
 .supplier-logo {
@@ -477,39 +495,41 @@
   align-items: center;
   justify-content: center;
   background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   overflow: hidden;
   border: 2px solid #e9ecef;
-  padding: 10px;
+  padding: 8px;
+  position: relative;
 }
 
 .supplier-logo:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-5px) scale(1.03);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border-color: var(--success-color);
+  animation-play-state: paused;
 }
 
 .supplier-logo img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 85%;
+  max-height: 85%;
   object-fit: contain;
-  filter: grayscale(100%);
+  filter: grayscale(80%) brightness(1.1);
   transition: all 0.3s ease;
 }
 
 .supplier-logo:hover img {
-  filter: grayscale(0%);
+  filter: grayscale(0%) brightness(1);
   transform: scale(1.05);
 }
 
-@keyframes scroll-suppliers {
+@keyframes scroll-suppliers-right {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
@@ -517,15 +537,87 @@
   animation-play-state: paused;
 }
 
-@media (max-width: 576px) {
-  .supplier-logo {
-    width: 120px;
-    height: 80px;
+/* Responsive Carousel Fixes */
+@media (max-width: 768px) {
+  .clients-carousel-container,
+  .suppliers-carousel-container {
+    margin: 1.5rem 0;
+    padding: 0.5rem 0;
   }
   
+  .clients-carousel,
   .suppliers-carousel {
     gap: 2rem;
   }
+  
+  .client-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .supplier-logo {
+    width: 120px;
+    height: 85px;
+  }
+}
+
+@media (max-width: 576px) {
+  .clients-carousel,
+  .suppliers-carousel {
+    gap: 1.5rem;
+  }
+  
+  .client-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .supplier-logo {
+    width: 100px;
+    height: 70px;
+  }
+  
+  .clients-carousel {
+    animation-duration: 20s;
+  }
+  
+  .suppliers-carousel {
+    animation-duration: 25s;
+  }
+}
+
+/* Smooth carousel animations */
+.clients-carousel-container::before,
+.clients-carousel-container::after,
+.suppliers-carousel-container::before,
+.suppliers-carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-carousel-container::before,
+.suppliers-carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, #f8f9fa, transparent);
+}
+
+.clients-carousel-container::after,
+.suppliers-carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, #f8f9fa, transparent);
+}
+
+.suppliers-carousel-container::before {
+  background: linear-gradient(to right, white, transparent);
+}
+
+.suppliers-carousel-container::after {
+  background: linear-gradient(to left, white, transparent);
 }
 
 /* Certification Section */

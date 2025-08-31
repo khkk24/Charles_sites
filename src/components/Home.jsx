@@ -353,7 +353,7 @@ const Home = () => {
                   <Button 
                     as={Link}
                     to="/orcamentos"
-                    variant="primary" 
+                    variant="success" 
                     size="lg" 
                     className="cta-button"
                   >
@@ -364,7 +364,7 @@ const Home = () => {
                     href="https://wa.me/5541995226237?text=Olá! Gostaria de conhecer os serviços da Engenigma."
                     target="_blank"
                     rel="noopener noreferrer"
-                    variant="outline-primary" 
+                    variant="warning" 
                     size="lg" 
                     className="cta-button"
                   >

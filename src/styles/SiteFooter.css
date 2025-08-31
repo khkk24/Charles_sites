@@ -134,13 +134,12 @@
 }
 
 .footer-link {
-  color: #adb5bd !important;
-  text-decoration: none;
-  padding: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.8) !important;
   font-size: 0.9rem;
-  transition: var(--transition);
-  position: relative;
-  display: block;
+  padding: 0.25rem 0;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
 }
 
 .footer-link::before {
@@ -153,13 +152,19 @@
 }
 
 .footer-link:hover {
-  color: white !important;
-  padding-left: 1rem;
+  color: #28a745 !important;
+  padding-left: 0.5rem;
+  transform: translateX(2px);
 }
 
-.footer-link:hover::before {
-  opacity: 1;
-  left: 0;
+.footer-link.fw-bold {
+  color: #28a745 !important;
+  font-weight: 600 !important;
+}
+
+.footer-link.fw-bold:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
 }
 
 /* Contact & Social Section */

@@ -265,6 +265,42 @@
   background: var(--light-color);
 }
 
+/* CTA Section Buttons */
+.cta-section .cta-button.btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-section .cta-button.btn-success:hover {
+  background: linear-gradient(135deg, #218838, #1abc9c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.cta-section .cta-button.btn-warning {
+  background: linear-gradient(135deg, #ffc107, #ff8c00);
+  border: none;
+  color: #212529;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-section .cta-button.btn-warning:hover {
+  background: linear-gradient(135deg, #e0a800, #ff7700);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+  color: #212529;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {

@@ -5,6 +5,7 @@ import {
   BsFacebook, BsInstagram, BsLinkedin, BsHeart 
 } from 'react-icons/bs';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import getImagePath from '../utils/imagePaths';
 import '../styles/SiteFooter.css';
 
@@ -18,19 +19,30 @@ const SiteFooter = () => {
     whatsapp: '5541995226237'
   };
 
+  // Services matching the ones from Services.jsx
   const services = [
-    'Instalações Elétricas',
-    'Manutenção Elétrica',
-    'Sistemas Fotovoltaicos',
-    'Segurança Eletrônica',
-    'SPDA'
+    { name: 'Instalações Elétricas Residenciais', path: '/services', anchor: '#servico-1' },
+    { name: 'Sistemas Fotovoltaicos', path: '/services', anchor: '#servico-2' },
+    { name: 'Automação Residencial', path: '/services', anchor: '#servico-3' },
+    { name: 'Segurança Eletrônica', path: '/services', anchor: '#servico-4' },
+    { name: 'SPDA (Para-raios)', path: '/services', anchor: '#servico-5' },
+    { name: 'Prevenção a Incêndio', path: '/services', anchor: '#servico-6' },
+    { name: 'Instalações Industriais', path: '/services', anchor: '#servico-7' },
+    { name: 'Manutenção Elétrica', path: '/services', anchor: '#servico-8' },
+    { name: 'Projeto Elétrico', path: '/services', anchor: '#servico-9' },
+    { name: 'Laudos e Inspeções', path: '/services', anchor: '#servico-10' },
+    { name: 'Iluminação LED', path: '/services', anchor: '#servico-11' },
+    { name: 'Quadros Elétricos', path: '/services', anchor: '#servico-12' }
   ];
 
+  // Updated quick links matching the actual project structure
   const quickLinks = [
     { name: 'Início', path: '/' },
-    { name: 'Serviços', path: '/services' },
-    { name: 'Dashboard', path: '/dashboard' },
-    { name: 'Contato', path: '/contact' }
+    { name: 'Nossos Serviços', path: '/services' },
+    { name: 'Quem Somos', path: '/quem-somos' },
+    { name: 'Solicitar Orçamento', path: '/orcamentos' },
+    { name: 'Contato', path: '/contact' },
+    { name: 'Ouvidoria', path: '/ouvidoria' }
   ];
 
   const openWhatsApp = () => {
@@ -45,7 +57,7 @@ const SiteFooter = () => {
         <Container>
           <Row>
             {/* Company Info */}
-            <Col lg={4} md={6} className="mb-4">
+            <Col lg={3} md={6} className="mb-4">
               <div className="footer-section">
                 <h5 className="footer-title">Engenigma</h5>
                 <p className="footer-description">
@@ -77,15 +89,25 @@ const SiteFooter = () => {
             </Col>
 
             {/* Services */}
-            <Col lg={2} md={6} className="mb-4">
+            <Col lg={3} md={6} className="mb-4">
               <div className="footer-section">
-                <h6 className="footer-subtitle">Serviços</h6>
+                <h6 className="footer-subtitle">Nossos Serviços</h6>
                 <Nav className="footer-nav flex-column">
-                  {services.map((service, index) => (
-                    <Nav.Link key={index} className="footer-link">
-                      {service}
-                    </Nav.Link>
+                  {services.slice(0, 8).map((service, index) => (
+                    <Link 
+                      key={index} 
+                      to={service.path}
+                      className="footer-link text-decoration-none"
+                    >
+                      {service.name}
+                    </Link>
                   ))}
+                  <Link 
+                    to="/services"
+                    className="footer-link text-decoration-none fw-bold mt-2"
+                  >
+                    Ver Todos os Serviços →
+                  </Link>
                 </Nav>
               </div>
             </Col>
@@ -156,38 +178,36 @@ const SiteFooter = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </Col>
 
-            {/* Company Gallery */}
-            <Col lg={3} md={6} className="mb-4">
-              <div className="footer-section">
-                <h6 className="footer-subtitle">Nossos Projetos</h6>
-                <div className="footer-gallery">
-                  <div className="gallery-item">
-                    <img 
-                      src={getImagePath("/images/engenigma-brand-1.jpg")}
-                      alt="Projeto Engenigma 1" 
-                      className="gallery-image"
-                    />
-                    <div className="gallery-overlay">
-                      <small>Instalações Profissionais</small>
+                {/* Company Gallery */}
+                <div className="mt-4">
+                  <h6 className="footer-subtitle">Nossos Projetos</h6>
+                  <div className="footer-gallery">
+                    <div className="gallery-item">
+                      <img 
+                        src={getImagePath("/images/engenigma-brand-1.jpg")}
+                        alt="Projeto Engenigma 1" 
+                        className="gallery-image"
+                      />
+                      <div className="gallery-overlay">
+                        <small>Instalações Profissionais</small>
+                      </div>
+                    </div>
+                    <div className="gallery-item">
+                      <img 
+                        src={getImagePath("/images/engenigma-brand-2.jpg")}
+                        alt="Projeto Engenigma 2" 
+                        className="gallery-image"
+                      />
+                      <div className="gallery-overlay">
+                        <small>Equipe Especializada</small>
+                      </div>
                     </div>
                   </div>
-                  <div className="gallery-item">
-                    <img 
-                      src={getImagePath("/images/engenigma-brand-2.jpg")}
-                      alt="Projeto Engenigma 2" 
-                      className="gallery-image"
-                    />
-                    <div className="gallery-overlay">
-                      <small>Equipe Especializada</small>
-                    </div>
-                  </div>
+                  <p className="gallery-description">
+                    Veja alguns dos nossos trabalhos realizados com excelência e qualidade.
+                  </p>
                 </div>
-                <p className="gallery-description">
-                  Veja alguns dos nossos trabalhos realizados com excelência e qualidade.
-                </p>
               </div>
             </Col>
           </Row>

@@ -480,54 +480,24 @@ const Services = () => {
           <div className="clients-carousel-container">
             <div className="clients-carousel">
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/lhc.jpg")} alt="LHC" />
+                <img src={getImagePath("/images/clients/copel.png")} alt="Copel" />
               </div>
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/masterdomus.jpg")} alt="Masterdomus" />
+                <img src={getImagePath("/images/clients/STM_emprendimento.jpeg")} alt="STM Empreendimento" />
               </div>
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/gnatus.png")} alt="Gnatus" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/curitiba.jpeg")} alt="Prefeitura de Curitiba" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/sao_jose_pinhais.png")} alt="São José dos Pinhais" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/sao_bento_sul.png")} alt="São Bento do Sul" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/client1.png")} alt="Cliente" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/client2.jpeg")} alt="Cliente" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/client3.jpeg")} alt="Cliente" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/client4.png")} alt="Cliente" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/client5.jpg")} alt="Cliente" />
+                <img src={getImagePath("/images/clients/baixados_3.png")} alt="Cliente" />
               </div>
               
               {/* Duplicate for seamless loop */}
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/lhc.jpg")} alt="LHC" />
+                <img src={getImagePath("/images/clients/copel.png")} alt="Copel" />
               </div>
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/masterdomus.jpg")} alt="Masterdomus" />
+                <img src={getImagePath("/images/clients/STM_emprendimento.jpeg")} alt="STM Empreendimento" />
               </div>
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/gnatus.png")} alt="Gnatus" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/curitiba.jpeg")} alt="Prefeitura de Curitiba" />
-              </div>
-              <div className="client-logo">
-                <img src={getImagePath("/images/clients/sao_jose_pinhais.png")} alt="São José dos Pinhais" />
+                <img src={getImagePath("/images/clients/baixados_3.png")} alt="Cliente" />
               </div>
             </div>
           </div>
@@ -550,42 +520,42 @@ const Services = () => {
           <div className="suppliers-carousel-container">
             <div className="suppliers-carousel">
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier1.png")} alt="Fornecedor 1" />
+                <img src={getImagePath("/images/suppliers/co_fio.png")} alt="Co Fio" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier2.png")} alt="Fornecedor 2" />
+                <img src={getImagePath("/images/suppliers/furukawa.png")} alt="Furukawa" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier3.png")} alt="Fornecedor 3" />
+                <img src={getImagePath("/images/suppliers/intelbras.png")} alt="Intelbras" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier4.png")} alt="Fornecedor 4" />
+                <img src={getImagePath("/images/suppliers/shinaider.png")} alt="Schneider" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier5.png")} alt="Fornecedor 5" />
+                <img src={getImagePath("/images/suppliers/soprano.png")} alt="Soprano" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier6.png")} alt="Fornecedor 6" />
+                <img src={getImagePath("/images/suppliers/supplier1.png")} alt="Fornecedor" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier7.png")} alt="Fornecedor 7" />
+                <img src={getImagePath("/images/suppliers/tramontina.png")} alt="Tramontina" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier8.png")} alt="Fornecedor 8" />
+                <img src={getImagePath("/images/suppliers/weg.png")} alt="WEG" />
               </div>
               
               {/* Duplicate for seamless loop */}
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier1.png")} alt="Fornecedor 1" />
+                <img src={getImagePath("/images/suppliers/co_fio.png")} alt="Co Fio" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier2.png")} alt="Fornecedor 2" />
+                <img src={getImagePath("/images/suppliers/furukawa.png")} alt="Furukawa" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier3.png")} alt="Fornecedor 3" />
+                <img src={getImagePath("/images/suppliers/intelbras.png")} alt="Intelbras" />
               </div>
               <div className="supplier-logo">
-                <img src={getImagePath("/images/suppliers/supplier4.png")} alt="Fornecedor 4" />
+                <img src={getImagePath("/images/suppliers/shinaider.png")} alt="Schneider" />
               </div>
             </div>
           </div>
@@ -735,7 +705,7 @@ const Services = () => {
                   <Button 
                     as={Link}
                     to="/orcamentos"
-                    variant="primary" 
+                    variant="success" 
                     size="lg" 
                     className="me-3"
                   >
@@ -746,7 +716,7 @@ const Services = () => {
                     href="https://wa.me/5541995226237?text=Olá! Gostaria de falar sobre os serviços da Engenigma."
                     target="_blank"
                     rel="noopener noreferrer"
-                    variant="outline-primary" 
+                    variant="warning" 
                     size="lg"
                   >
                     Falar no WhatsApp

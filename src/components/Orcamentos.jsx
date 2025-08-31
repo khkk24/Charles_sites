@@ -228,7 +228,7 @@ const Orcamentos = () => {
                       </Form.Select>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" size="lg">
+                    <Button variant="success" type="submit" size="lg">
                       Solicitar Orçamento
                     </Button>
                   </Form>
@@ -309,7 +309,7 @@ const Orcamentos = () => {
               </p>
               <div className="d-flex gap-2 justify-content-center">
                 <Button 
-                  variant="outline-success" 
+                  variant="warning" 
                   size="sm"
                   onClick={() => {
                     openWhatsApp();
