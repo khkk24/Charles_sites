@@ -449,17 +449,17 @@ const Services = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="mb-4">
-              <div className="company-image slide-element">
+              {/* <div className="company-image slide-element"> */}
                 <img 
-                  src={getImagePath("/images/engenigma-brand-1.jpg")}
+                  src={getImagePath("/images/BRINDE-2.jpg")}
                   alt="Engenigma - Nossa Empresa" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "400px", objectFit: "cover"}}
                 />
-                <div className="image-badge">
+                {/* <div className="image-badge">
                   <span>Engenigma 2024</span>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
             </Col>
             <Col lg={6} className="slide-element">
               <h2 className="mb-4">A Engenigma em Números</h2>
