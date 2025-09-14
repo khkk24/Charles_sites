@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { 
   BsLightning, BsSun, BsShield, BsTools, BsUmbrella, BsArrowRight, 
   BsHouse, BsBuilding, BsGear, BsFire, BsWifi, BsThermometer,
-  BsBattery, BsLightbulb, BsFileText, BsPeople
+  BsBattery, BsLightbulb, BsFileText, BsPeople, BsSpeedometer2
 } from 'react-icons/bs';
 import getImagePath from '../utils/imagePaths';
 import SEO from './SEO';
@@ -115,7 +115,7 @@ const Services = () => {
         'Controle automatizado',
         'Integração de sistemas'
       ],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: getImagePath('/images/proj_icone.png'),
       color: 'info'
     },
     {
@@ -140,7 +140,7 @@ const Services = () => {
         'Controle de acesso biométrico',
         'Monitoramento 24h profissional'
       ],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: getImagePath('/images/seg_camera.png'),
       color: 'danger'
     },
     {
@@ -165,7 +165,7 @@ const Services = () => {
         'Sistema de aterramento',
         'Certificação e laudo técnico'
       ],
-      image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: getImagePath('/images/proj_spda2.png'),
       color: 'success'
     },
     {
@@ -190,7 +190,7 @@ const Services = () => {
         'Equipamentos de combate',
         'Conformidade com normas'
       ],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: getImagePath('/images/proj_incendio.png'),
       color: 'danger'
     },
     {
@@ -204,7 +204,7 @@ const Services = () => {
         'Infraestrutura de TI',
         'Conectividade empresarial'
       ],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: getImagePath('/images/rede_internet2.png'),
       color: 'primary'
     },
     {
@@ -218,7 +218,7 @@ const Services = () => {
         'Climatização industrial',
         'Manutenção especializada'
       ],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      image: getImagePath('/images/proj_ar_condicionador.png'),
       color: 'info'
     },
     {
@@ -276,6 +276,40 @@ const Services = () => {
       ],
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       color: 'info'
+    },
+    {
+      id: 13,
+      icon: <BsSpeedometer2 size={50} />,
+      title: 'Eficiência Energética',
+      description: 'Soluções tecnológicas integradas para criar sistemas energéticos mais eficientes e sustentáveis, reduzindo custos operacionais e impacto ambiental.',
+      detailedDescription: `A eficiência energética fundamenta-se na ideia de utilizar a energia de forma mais racional e eficaz, garantindo que uma maior parte da energia consumida seja convertida em trabalho útil, com o mínimo de desperdício possível.
+
+      **Nossa Abordagem:** Buscamos constantemente por métodos que permitam aproveitar ao máximo cada unidade de energia consumida, promovendo benefícios ambientais, econômicos e sociais. Nossa equipe é capaz de integrar soluções tecnológicas para criar um sistema energético mais eficiente e sustentável.
+
+      **Soluções Empresariais:** Especializamos em atender donos de empresas e mercados de grande e médio porte que enfrentam faturas de energia elevadas. Oferecemos soluções personalizadas que não só reduzem os custos operacionais e o impacto ambiental, mas também contribuem para a modernização da infraestrutura e a transição para uma economia de baixo consumo energético.
+
+      **Metodologia Eficiente:** Utilizamos a energia de maneira mais eficaz, gerando economia nos custos operacionais e reduzindo o impacto ambiental. Isso significa usar menos energia para realizar a mesma tarefa ou produzir o mesmo resultado, minimizando o desperdício e otimizando os recursos disponíveis.
+
+      **Benefícios Principais:**
+      
+      **1. Economia de Custos:** Redução significativa do consumo de energia, com contas de eletricidade, aquecimento e combustível menores, especialmente em longo prazo.
+      
+      **2. Redução de Impactos Ambientais:** Diminuição da emissão de gases de efeito estufa ao reduzir a necessidade de produção de energia a partir de fontes fósseis.
+      
+      **3. Aumento da Vida Útil dos Equipamentos:** Equipamentos que operam adequadamente tendem a funcionar de forma eficaz e menos estressante, aumentando durabilidade e reduzindo manutenção.
+      
+      **4. Competitividade Econômica:** Empresas que adotam práticas de eficiência energética reduzem custos operacionais, tornando-se mais competitivas no mercado.
+      
+      **5. Conformidade com Normas:** Cumprimento de metas de eficiência energética através de políticas públicas e regulamentações ambientais, proporcionando vantagens competitivas.`,
+      features: [
+        'Análise de consumo energético',
+        'Soluções para empresas de grande porte',
+        'Redução de custos operacionais',
+        'Modernização de infraestrutura',
+        'Conformidade com normas ambientais'
+      ],
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      color: 'success'
     }
   ];
 
@@ -486,7 +520,34 @@ const Services = () => {
                 <img src={getImagePath("/images/clients/STM_emprendimento.jpeg")} alt="STM Empreendimento" />
               </div>
               <div className="client-logo">
+                <img src={getImagePath("/images/clients/LHC-PB-Horizontal.jpg")} alt="LHC" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/Masterdomus-_Fundo azul escuro h2.jpg")} alt="Masterdomus" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/gnatus.png")} alt="Gnatus" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/prefetura_de_curitiba.jpeg")} alt="Prefeitura de Curitiba" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/logo_sao_josé_dos_pinhais.png")} alt="São José dos Pinhais" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/prefeitura_de_são_bento_de_sul.png")} alt="São Bento do Sul" />
+              </div>
+              <div className="client-logo">
                 <img src={getImagePath("/images/clients/baixados_3.png")} alt="Cliente" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/5d7a8980d3a74.jpg")} alt="Cliente" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/Screenshot_5.png")} alt="Cliente" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/images.jpeg")} alt="Cliente" />
               </div>
               
               {/* Duplicate for seamless loop */}
@@ -497,7 +558,16 @@ const Services = () => {
                 <img src={getImagePath("/images/clients/STM_emprendimento.jpeg")} alt="STM Empreendimento" />
               </div>
               <div className="client-logo">
-                <img src={getImagePath("/images/clients/baixados_3.png")} alt="Cliente" />
+                <img src={getImagePath("/images/clients/LHC-PB-Horizontal.jpg")} alt="LHC" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/Masterdomus-_Fundo azul escuro h2.jpg")} alt="Masterdomus" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/gnatus.png")} alt="Gnatus" />
+              </div>
+              <div className="client-logo">
+                <img src={getImagePath("/images/clients/prefetura_de_curitiba.jpeg")} alt="Prefeitura de Curitiba" />
               </div>
             </div>
           </div>

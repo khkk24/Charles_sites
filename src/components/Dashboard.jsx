@@ -458,7 +458,7 @@ const Dashboard = () => {
             <Col lg={4} className="text-center">
               <div className="company-logo-container scale-element">
                 <img 
-                  src={getImagePath("/images/engenigma-logo.svg")}
+                  src={getImagePath("/images/engenigma-logo.jpg")}
                   alt="EngEnigma Logo" 
                   className="company-logo-dashboard"
                   style={{ maxWidth: '200px', height: 'auto' }}

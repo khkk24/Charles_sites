@@ -183,12 +183,14 @@ const Home = () => {
             <Col lg={6} className="fade-element">
               <h2 className="section-title">Bem-vindos à Engenigma</h2>
               <p className="section-description">
-                A <strong>Engenigma Instalações Elétricas & Manutenção LTDA - ME</strong> é uma empresa 
-                líder em soluções elétricas, estabelecida em março de 2021 em Curitiba, PR. 
-                Com mais de 4 anos de experiência no mercado, oferecemos serviços completos de 
-                projeto, instalação e manutenção elétrica para residências, edifícios comerciais 
-                e complexos industriais. Nossa equipe certificada garante excelência técnica, 
-                segurança e inovação em cada projeto executado.
+                A <strong>ENGENIGMA Instalações Elétricas & Manutenção LTDA</strong> é uma empresa 
+                líder em soluções Elétricas, Eletrônicas e Telecom. Fundada desde 2021 em 
+                Curitiba (PARANÁ), com mais de 200 projetos e instalações registradas no 
+                mercado. Oferecemos serviços completos de projeto, instalação, homologação 
+                e manutenção elétrica para residências, prédios, condomínio, edifícios 
+                comerciais, fazenda, clínica, hospital e complexos industriais. Nossa equipe é 
+                composta de engenheiros e técnicos qualificados para garantir a excelência, a 
+                segurança e a inovação em cada projeto executado.
               </p>
               <div className="company-stats">
                 <div className="stat-item">
@@ -235,7 +237,7 @@ const Home = () => {
             <Col lg={6} className="mb-4">
               <div className="company-showcase-image fade-element">
                 <img 
-                  src={getImagePath("/images/engenigma-brand-1.jpg")}
+                  src={getImagePath("/images/BRINDE-1.jpg")}
                   alt="Projetos da Engenigma" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "300px", objectFit: "cover"}}
@@ -261,7 +263,7 @@ const Home = () => {
             <Col lg={6} className="order-lg-2 mb-4">
               <div className="company-showcase-image fade-element">
                 <img 
-                  src={getImagePath("/images/engenigma-brand-2.jpg")}
+                  src={getImagePath("/images/BRINDE-2.jpg")}
                   alt="Equipe Engenigma" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "300px", objectFit: "cover"}}
