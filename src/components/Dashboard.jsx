@@ -194,7 +194,7 @@ const Dashboard = () => {
     {
       id: 1,
       title: 'Primeiro Contato',
-      description: 'Visitou o site da Engenigma',
+      description: 'Visitou o site da ENGENIGMA',
       icon: <BsStar />,
       unlocked: true,
       date: '2025-01-01',
@@ -223,7 +223,7 @@ const Dashboard = () => {
     },
     {
       id: 4,
-      title: 'Especialista EngEnigma',
+      title: 'Especialista ENGENIGMA',
       description: 'Completou todos os serviços disponíveis',
       icon: <BsTrophy />,
       unlocked: completedServices === services.length,
@@ -412,8 +412,8 @@ const Dashboard = () => {
     <div className="dashboard-page">
       <SEO 
         title="Dashboard - Acompanhe sua Jornada"
-        description="Dashboard gamificado da Engenigma. Explore nossos serviços, desbloqueie badges e acompanhe estatísticas de projetos elétricos."
-        keywords="dashboard engenigma, gamificação, badges elétricos, estatísticas projetos"
+        description="Dashboard gamificado da ENGENIGMA. Explore nossos serviços, desbloqueie badges e acompanhe estatísticas de projetos elétricos."
+        keywords="dashboard ENGENIGMA, gamificação, badges elétricos, estatísticas projetos"
       />
       
       {/* Header Section - Redesigned */}
@@ -433,7 +433,7 @@ const Dashboard = () => {
                   </Badge>
                 </div>
                 <h1 className="dashboard-title mb-3">
-                  Dashboard EngEnigma
+                  Dashboard ENGENIGMA
                   <div className="title-underline"></div>
                 </h1>
                 <p className="dashboard-subtitle mb-4">
@@ -459,7 +459,7 @@ const Dashboard = () => {
               <div className="company-logo-container scale-element">
                 <img 
                   src={getImagePath("/images/engenigma-logo.jpg")}
-                  alt="EngEnigma Logo" 
+                  alt="ENGENIGMA Logo" 
                   className="company-logo-dashboard"
                   style={{ maxWidth: '200px', height: 'auto' }}
                 />
@@ -482,7 +482,7 @@ const Dashboard = () => {
             <Col>
               <h2 className="section-title scale-element">
                 <BsGraphUp className="me-2 text-primary" />
-                EngEnigma em Números
+                ENGENIGMA em Números
               </h2>
               <p className="text-muted">Nossa trajetória de crescimento e excelência</p>
             </Col>
@@ -622,7 +622,7 @@ const Dashboard = () => {
               <div className="section-header text-center mb-5">
                 <h2 className="section-title scale-element">
                   <BsAward className="me-2 text-primary" />
-                  Catálogo de Serviços EngEnigma
+                  Catálogo de Serviços ENGENIGMA
                 </h2>
                 <p className="section-subtitle text-muted">
                   Descubra nossos 12 serviços especializados e desbloqueie badges exclusivos
@@ -731,7 +731,7 @@ const Dashboard = () => {
                   Analytics & Performance
                 </h2>
                 <p className="section-subtitle text-muted">
-                  Acompanhe o crescimento e performance da EngEnigma
+                  Acompanhe o crescimento e performance da ENGENIGMA
                 </p>
               </div>
             </Col>
@@ -794,7 +794,7 @@ const Dashboard = () => {
                 <Card.Header className="bg-warning text-dark">
                   <h5 className="mb-0 d-flex align-items-center">
                     <BsCalendar className="me-2" />
-                    Crescimento da EngEnigma (2021-2025)
+                    Crescimento da ENGENIGMA (2021-2025)
                   </h5>
                 </Card.Header>
                 <Card.Body className="p-4">
@@ -928,7 +928,7 @@ const Dashboard = () => {
                   Continue sua Jornada de Descoberta!
                 </h2>
                 <p className="cta-description-enhanced mb-4">
-                  Você já conhece <strong>{completedServices} de {services.length} serviços</strong> da EngEnigma. 
+                  Você já conhece <strong>{completedServices} de {services.length} serviços</strong> da ENGENIGMA. 
                   Explore nosso portfólio completo, descubra soluções inovadoras e desbloqueie todos os badges. 
                   Cada descoberta te aproxima de se tornar um verdadeiro especialista em nossos serviços!
                 </p>

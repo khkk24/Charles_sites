@@ -46,7 +46,7 @@ const SiteFooter = () => {
   ];
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent('Olá! Gostaria de conhecer mais sobre os serviços da Engenigma.');
+    const message = encodeURIComponent('Olá! Gostaria de conhecer mais sobre os serviços da ENGENIGMA.');
     window.open(`https://wa.me/${contactInfo.whatsapp}?text=${message}`, '_blank');
   };
 
@@ -59,7 +59,7 @@ const SiteFooter = () => {
             {/* Company Info */}
             <Col lg={3} md={6} className="mb-4">
               <div className="footer-section">
-                <h5 className="footer-title">Engenigma</h5>
+                <h5 className="footer-title">ENGENIGMA</h5>
                 <p className="footer-description">
                   Especialistas em Instalações Elétricas, Energia Solar e Segurança Eletrônica. 
                   Oferecemos soluções completas com qualidade e segurança desde 2021.
@@ -186,7 +186,7 @@ const SiteFooter = () => {
                     <div className="gallery-item">
                       <img 
                         src={getImagePath("/images/engenigma-brand-1.jpg")}
-                        alt="Projeto Engenigma 1" 
+                        alt="Projeto ENGENIGMA 1" 
                         className="gallery-image"
                       />
                       <div className="gallery-overlay">
@@ -196,7 +196,7 @@ const SiteFooter = () => {
                     <div className="gallery-item">
                       <img 
                         src={getImagePath("/images/engenigma-brand-2.jpg")}
-                        alt="Projeto Engenigma 2" 
+                        alt="Projeto ENGENIGMA 2" 
                         className="gallery-image"
                       />
                       <div className="gallery-overlay">
@@ -220,7 +220,7 @@ const SiteFooter = () => {
           <Row className="align-items-center">
             <Col md={6}>
               <div className="company-legal">
-                <strong>Engenigma Instalações Elétricas & Manutenção LTDA - ME</strong>
+                <strong>ENGENIGMA Instalações Elétricas & Manutenção LTDA - ME</strong>
                 <br />
                 <small>CNPJ: 41.379.006/0001-07 | Fundada em Março de 2021</small>
               </div>
@@ -228,7 +228,7 @@ const SiteFooter = () => {
             <Col md={6} className="text-md-end">
               <div className="copyright">
                 <p className="mb-0">
-                  © {currentYear} Engenigma. Todos os direitos reservados.
+                  © {currentYear} ENGENIGMA. Todos os direitos reservados.
                 </p>
                 {/* <p className="mb-0">
                   <small>

@@ -39,7 +39,7 @@ const Home = () => {
     },
     {
       image: getImagePath('/images/engenigma-brand-1.jpg'),
-      title: 'Engenigma - Sua Empresa de Confiança',
+      title: 'ENGENIGMA - Sua Empresa de Confiança',
       description: 'Especialistas em Instalações Elétricas com anos de experiência e qualidade garantida'
     },
     {
@@ -125,7 +125,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <SEO 
-        title="Engenigma Instalações Elétricas - Curitiba, PR"
+        title="ENGENIGMA Instalações Elétricas - Curitiba, PR"
         description="Especialistas em Instalações Elétricas, Energia Solar e Segurança Eletrônica em Curitiba. Projetos residenciais, comerciais e industriais. Orçamento gratuito!"
         keywords="Instalações Elétricas Curitiba, Energia Solar, Segurança Eletrônica, SPDA, Manutenção Elétrica, projeto Elétrico"
       />
@@ -181,7 +181,7 @@ const Home = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="fade-element">
-              <h2 className="section-title">Bem-vindos à Engenigma</h2>
+              <h2 className="section-title">Bem-vindos à ENGENIGMA</h2>
               <p className="section-description">
                 A <strong>ENGENIGMA Instalações Elétricas & Manutenção LTDA</strong> é uma empresa 
                 líder em soluções Elétricas, Eletrônicas e Telecom. Fundada desde 2021 em 
@@ -213,7 +213,7 @@ const Home = () => {
               <div className="company-image">
                 <img 
                   src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                  alt="Engenigma Instalações Elétricas" 
+                  alt="ENGENIGMA Instalações Elétricas" 
                   className="img-fluid rounded"
                 />
               </div>
@@ -227,7 +227,7 @@ const Home = () => {
         <Container>
           <Row className="text-center mb-5">
             <Col>
-              <h2 className="section-title fade-element">A Engenigma em Ação</h2>
+              <h2 className="section-title fade-element">A ENGENIGMA em Ação</h2>
               <p className="section-description fade-element">
                 Conheça nossos projetos e a qualidade dos nossos serviços
               </p>
@@ -238,7 +238,7 @@ const Home = () => {
               <div className="company-showcase-image fade-element">
                 <img 
                   src={getImagePath("/images/BRINDE-1.jpg")}
-                  alt="Projetos da Engenigma" 
+                  alt="Projetos da ENGENIGMA" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "300px", objectFit: "cover"}}
                 />
@@ -264,7 +264,7 @@ const Home = () => {
               <div className="company-showcase-image fade-element">
                 <img 
                   src={getImagePath("/images/BRINDE-2.jpg")}
-                  alt="Equipe Engenigma" 
+                  alt="Equipe ENGENIGMA" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "300px", objectFit: "cover"}}
                 />
@@ -363,7 +363,7 @@ const Home = () => {
                   </Button>
                   <Button 
                     as="a"
-                    href="https://wa.me/5541995226237?text=Olá! Gostaria de conhecer os serviços da Engenigma."
+                    href="https://wa.me/5541995226237?text=Olá! Gostaria de conhecer os serviços da ENGENIGMA."
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="warning" 

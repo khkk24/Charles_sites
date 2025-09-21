@@ -33,7 +33,7 @@ const Ouvidoria = () => {
       <Row className="justify-content-center">
         <Col lg={10}>
           <h1 className={`text-center mb-5 ${darkMode ? 'text-light' : 'text-dark'}`}>
-            Ouvidoria Engenigma
+            Ouvidoria ENGENIGMA
           </h1>
           
           <Row className="mb-5">
@@ -213,7 +213,7 @@ const Ouvidoria = () => {
                 </Card.Header>
                 <Card.Body>
                   <p className="small">
-                    A Engenigma está comprometida com os mais altos padrões éticos 
+                    A ENGENIGMA está comprometida com os mais altos padrões éticos 
                     e de qualidade. Nossa ouvidoria é um canal para garantir que 
                     esses valores sejam sempre respeitados.
                   </p>

@@ -133,8 +133,8 @@ const Contact = () => {
     <div className="contact-page">
       <SEO 
         title="Contato - Solicite seu Orçamento Gratuito"
-        description="Entre em contato com a Engenigma para orçamentos de instalações elétricas, energia solar e segurança eletrônica. Atendemos Curitiba e região."
-        keywords="contato engenigma, orçamento instalação elétrica, telefone engenigma, endereço Curitiba"
+        description="Entre em contato com a ENGENIGMA para orçamentos de instalações elétricas, energia solar e segurança eletrônica. Atendemos Curitiba e região."
+        keywords="contato ENGENIGMA, orçamento instalação elétrica, telefone ENGENIGMA, endereço Curitiba"
       />
       
       {/* Header Section */}
@@ -409,7 +409,7 @@ const Contact = () => {
                   <Card.Body>
                     <div className="company-detail">
                       <strong>Razão Social:</strong>
-                      <p>Engenigma Instalações Elétricas & Manutenção LTDA - ME</p>
+                      <p>ENGENIGMA Instalações Elétricas & Manutenção LTDA - ME</p>
                     </div>
                     <div className="company-detail">
                       <strong>CNPJ:</strong>

@@ -239,7 +239,7 @@ const Orcamentos = () => {
             <Col lg={4}>
               <Card className={`mb-4 ${darkMode ? 'bg-dark text-light' : ''}`}>
                 <Card.Body>
-                  <h4>Por que escolher a Engenigma?</h4>
+                  <h4>Por que escolher a ENGENIGMA?</h4>
                   <ul className="list-unstyled mt-3">
                     <li className="mb-2">✓ Mais de 10 anos de experiência</li>
                     <li className="mb-2">✓ Equipe especializada</li>

@@ -52,7 +52,7 @@ const Services = () => {
       icon: <BsLightning size={50} />,
       title: 'Elétrica Residencial, Predial, Industrial e Hospitalar',
       description: 'Projetos e Instalações Elétricas completas para residências, prédios, indústrias e estabelecimentos hospitalares/clínicas com total segurança.',
-      detailedDescription: `A EngEnigma oferece soluções completas em Instalações Elétricas para todos os segmentos, sempre priorizando a segurança, eficiência e conformidade com as normas técnicas.
+      detailedDescription: `A ENGENIGMA oferece soluções completas em Instalações Elétricas para todos os segmentos, sempre priorizando a segurança, eficiência e conformidade com as normas técnicas.
 
       **Elétrica Residencial:** Executamos projetos Elétricos completos para residências, incluindo dimensionamento de quadros de distribuição, circuitos de iluminação, tomadas de uso geral e específico, instalação de chuveiros Elétricos, ar-condicionado e sistemas de proteção. Garantimos total segurança familiar e máxima eficiência Energética, sempre seguindo as normas ABNT NBR 5410.
 
@@ -75,7 +75,7 @@ const Services = () => {
       icon: <BsSun size={50} />,
       title: 'Sistema de Energia Fotovoltaica',
       description: 'Instalação de sistemas de Energia Solar fotovoltaica residencial, empresarial e usinas fotovoltaicas para economia e sustentabilidade.',
-      detailedDescription: `A EngEnigma é especialista em Energia Solar fotovoltaica, oferecendo soluções completas e personalizadas para geração de Energia limpa, renovável e econômica.
+      detailedDescription: `A ENGENIGMA é especialista em Energia Solar fotovoltaica, oferecendo soluções completas e personalizadas para geração de Energia limpa, renovável e econômica.
 
       **Energia Solar Residencial:** Desenvolvemos sistemas fotovoltaicos personalizados para residências, utilizando painéis Solares de alta eficiência, inversores de última geração e sistemas de monitoramento em tempo real. Com nossos sistemas, você pode reduzir sua conta de luz em até 95%, além de contribuir para um futuro mais sustentável e valorizar seu imóvel.
 
@@ -123,7 +123,7 @@ const Services = () => {
       icon: <BsShield size={50} />,
       title: 'Sistema de Segurança Eletrônica',
       description: 'Proteção completa com câmeras de segurança 4K, alarmes inteligentes, controle de acesso biométrico e monitoramento 24h.',
-      detailedDescription: `A EngEnigma oferece as mais avançadas soluções em Segurança Eletrônica, proporcionando proteção total para residências, empresas e condomínios através de tecnologia de ponta e monitoramento profissional.
+      detailedDescription: `A ENGENIGMA oferece as mais avançadas soluções em Segurança Eletrônica, proporcionando proteção total para residências, empresas e condomínios através de tecnologia de ponta e monitoramento profissional.
 
       **CFTV 4K Ultra HD:** Sistemas de videomonitoramento com câmeras de altíssima resolução 4K, visão noturna infravermelha até 40 metros, lentes varifocais motorizadas e recursos de inteligência artificial para detecção automática de movimento e reconhecimento facial. Gravação em nuvem e local com backup redundante.
 
@@ -148,7 +148,7 @@ const Services = () => {
       icon: <BsUmbrella size={50} />,
       title: 'SPDA - Proteção contra Descargas Atmosféricas',
       description: 'Instalação e manutenção de sistemas de proteção contra raios e descargas atmosféricas para proteção completa de edificações.',
-      detailedDescription: `A EngEnigma é especialista em Sistemas de Proteção contra Descargas Atmosféricas (SPDA), oferecendo proteção completa contra raios e garantindo a segurança de pessoas, equipamentos e edificações.
+      detailedDescription: `A ENGENIGMA é especialista em Sistemas de Proteção contra Descargas Atmosféricas (SPDA), oferecendo proteção completa contra raios e garantindo a segurança de pessoas, equipamentos e edificações.
 
       **Projeto Técnico Especializado:** Elaboração de projetos técnicos rigorosamente conforme ABNT NBR 5419, incluindo análise de risco detalhada, cálculos de probabilidade de descargas, dimensionamento preciso do sistema e definição do nível de proteção adequado para cada tipo de edificação específica.
 
@@ -173,7 +173,7 @@ const Services = () => {
       icon: <BsFire size={50} />,
       title: 'Prevenção a Incêndio',
       description: 'Sistemas completos de prevenção e combate a incêndios com detectores inteligentes, alarmes, sprinklers e equipamentos certificados.',
-      detailedDescription: `A EngEnigma desenvolve e implementa sistemas completos de prevenção e combate a incêndios, garantindo a máxima segurança de vidas e patrimônio através de tecnologia avançada e conformidade total com as normas técnicas.
+      detailedDescription: `A ENGENIGMA desenvolve e implementa sistemas completos de prevenção e combate a incêndios, garantindo a máxima segurança de vidas e patrimônio através de tecnologia avançada e conformidade total com as normas técnicas.
 
       **Detecção Inteligente:** Instalação de detectores de fumaça ópticos e iônicos de última geração, detectores de temperatura compensados, detectores de chama infravermelha e ultravioleta, sensores de gases tóxicos e sistemas addressáveis que identificam precisamente o local do sinistro em tempo real.
 
@@ -409,7 +409,7 @@ const Services = () => {
         <Container>
           <Row className="text-center mb-5">
             <Col>
-              <h2 className="section-title slide-element">Por que escolher a Engenigma?</h2>
+              <h2 className="section-title slide-element">Por que escolher a ENGENIGMA?</h2>
             </Col>
           </Row>
           <Row>
@@ -444,7 +444,7 @@ const Services = () => {
         </Container>
       </section>
 
-      {/* Engenigma Company Stats */}
+      {/* ENGENIGMA Company Stats */}
       <section className="company-stats-section py-5">
         <Container>
           <Row className="align-items-center">
@@ -452,17 +452,17 @@ const Services = () => {
               {/* <div className="company-image slide-element">  */}
                 <img 
                   src={getImagePath("/images/BRINDE-2.jpg")}
-                  alt="Engenigma - Nossa Empresa" 
+                  alt="ENGENIGMA - Nossa Empresa" 
                   className="img-fluid rounded shadow-lg"
                   style={{width: "100%", height: "400px", objectFit: "cover"}}
                 />
                 {/* <div className="image-badge">
-                  <span>Engenigma 2024</span>
+                  <span>ENGENIGMA 2024</span>
                 </div> */}
               {/* </div> */}
             </Col>
             <Col lg={6} className="slide-element">
-              <h2 className="mb-4">A Engenigma em Números</h2>
+              <h2 className="mb-4">A ENGENIGMA em Números</h2>
               <p className="mb-4">
                 Desde 2021, construímos uma trajetória sólida de excelência em serviços elétricos, 
                 conquistando a confiança de centenas de clientes em Curitiba e região.
@@ -640,7 +640,7 @@ const Services = () => {
               <h2 className="mb-4">Qualidade e Certificação Garantidas</h2>
               <div className="certification-content">
                 <p className="lead mb-4">
-                  Todos os serviços prestados pela <strong>EngEnigma Instalações Elétricas e Manutenção</strong> 
+                  Todos os serviços prestados pela <strong>ENGENIGMA Instalações Elétricas e Manutenção</strong> 
                   são executados por profissionais certificados e qualificados, sempre seguindo todos os 
                   critérios técnicos de acordo com as Normas Regulamentadoras vigentes.
                 </p>
@@ -783,7 +783,7 @@ const Services = () => {
                   </Button>
                   <Button 
                     as="a"
-                    href="https://wa.me/5541995226237?text=Olá! Gostaria de falar sobre os serviços da Engenigma."
+                    href="https://wa.me/5541995226237?text=Olá! Gostaria de falar sobre os serviços da ENGENIGMA."
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="warning" 
