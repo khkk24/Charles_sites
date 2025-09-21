@@ -51,16 +51,16 @@ const Services = () => {
       id: 1,
       icon: <BsLightning size={50} />,
       title: 'Elétrica Residencial, Predial, Industrial e Hospitalar',
-      description: 'Projetos e instalações elétricas completas para residências, prédios, indústrias e estabelecimentos hospitalares/clínicas com total segurança.',
-      detailedDescription: `A EngEnigma oferece soluções completas em instalações elétricas para todos os segmentos, sempre priorizando a segurança, eficiência e conformidade com as normas técnicas.
+      description: 'Projetos e Instalações Elétricas completas para residências, prédios, indústrias e estabelecimentos hospitalares/clínicas com total segurança.',
+      detailedDescription: `A EngEnigma oferece soluções completas em Instalações Elétricas para todos os segmentos, sempre priorizando a segurança, eficiência e conformidade com as normas técnicas.
 
-      **Elétrica Residencial:** Executamos projetos elétricos completos para residências, incluindo dimensionamento de quadros de distribuição, circuitos de iluminação, tomadas de uso geral e específico, instalação de chuveiros elétricos, ar-condicionado e sistemas de proteção. Garantimos total segurança familiar e máxima eficiência energética, sempre seguindo as normas ABNT NBR 5410.
+      **Elétrica Residencial:** Executamos projetos Elétricos completos para residências, incluindo dimensionamento de quadros de distribuição, circuitos de iluminação, tomadas de uso geral e específico, instalação de chuveiros Elétricos, ar-condicionado e sistemas de proteção. Garantimos total segurança familiar e máxima eficiência Energética, sempre seguindo as normas ABNT NBR 5410.
 
-      **Elétrica Predial:** Especialistas em edifícios comerciais e residenciais, desenvolvemos e executamos projetos de baixa e média tensão, sistemas de distribuição elétrica, iluminação de emergência, sistemas de CFTV, controle de acesso e toda infraestrutura elétrica necessária para o funcionamento seguro e eficiente do empreendimento.
+      **Elétrica Predial:** Especialistas em edifícios comerciais e residenciais, desenvolvemos e executamos projetos de baixa e média tensão, sistemas de distribuição Elétrica, iluminação de emergência, sistemas de CFTV, controle de acesso e toda infraestrutura Elétrica necessária para o funcionamento seguro e eficiente do empreendimento.
 
-      **Elétrica Industrial:** Atendemos indústrias com instalações de alta complexidade técnica, incluindo motores de grande porte, sistemas de automação industrial, painéis de comando e controle, subestações, sistemas de aterramento e adequação rigorosa às Normas Regulamentadoras (NRs), especialmente NR-10.
+      **Elétrica Industrial:** Atendemos indústrias com Instalações de alta complexidade técnica, incluindo motores de grande porte, sistemas de automação industrial, painéis de comando e controle, subestações, sistemas de aterramento e adequação rigorosa às Normas Regulamentadoras (NRs), especialmente NR-10.
 
-      **Elétrica Hospitalar:** Executamos instalações críticas em hospitais, clínicas e laboratórios que requerem máxima confiabilidade e continuidade de energia. Incluindo sistemas de emergência, grupos geradores, iluminação cirúrgica, sistemas de alimentação ininterrupta (UPS) e total conformidade com normas da ANVISA e ABNT NBR 13534.`,
+      **Elétrica Hospitalar:** Executamos Instalações críticas em hospitais, clínicas e laboratórios que requerem máxima confiabilidade e continuidade de Energia. Incluindo sistemas de emergência, grupos geradores, iluminação cirúrgica, sistemas de alimentação ininterrupta (UPS) e total conformidade com normas da ANVISA e ABNT NBR 13534.`,
       features: [
         'Projeto elétrico residencial e comercial',
         'Instalação predial e industrial',
@@ -74,18 +74,18 @@ const Services = () => {
       id: 2,
       icon: <BsSun size={50} />,
       title: 'Sistema de Energia Fotovoltaica',
-      description: 'Instalação de sistemas de energia solar fotovoltaica residencial, empresarial e usinas fotovoltaicas para economia e sustentabilidade.',
-      detailedDescription: `A EngEnigma é especialista em energia solar fotovoltaica, oferecendo soluções completas e personalizadas para geração de energia limpa, renovável e econômica.
+      description: 'Instalação de sistemas de Energia Solar fotovoltaica residencial, empresarial e usinas fotovoltaicas para economia e sustentabilidade.',
+      detailedDescription: `A EngEnigma é especialista em Energia Solar fotovoltaica, oferecendo soluções completas e personalizadas para geração de Energia limpa, renovável e econômica.
 
-      **Energia Solar Residencial:** Desenvolvemos sistemas fotovoltaicos personalizados para residências, utilizando painéis solares de alta eficiência, inversores de última geração e sistemas de monitoramento em tempo real. Com nossos sistemas, você pode reduzir sua conta de luz em até 95%, além de contribuir para um futuro mais sustentável e valorizar seu imóvel.
+      **Energia Solar Residencial:** Desenvolvemos sistemas fotovoltaicos personalizados para residências, utilizando painéis Solares de alta eficiência, inversores de última geração e sistemas de monitoramento em tempo real. Com nossos sistemas, você pode reduzir sua conta de luz em até 95%, além de contribuir para um futuro mais sustentável e valorizar seu imóvel.
 
-      **Sistemas Empresariais:** Oferecemos soluções corporativas que reduzem drasticamente os custos operacionais com energia elétrica. Nossos projetos incluem análise de viabilidade, dimensionamento adequado, instalação completa e acompanhamento da performance, proporcionando retorno do investimento entre 3 a 5 anos e economia contínua por mais de 25 anos.
+      **Sistemas Empresariais:** Oferecemos soluções corporativas que reduzem drasticamente os custos operacionais com Energia Elétrica. Nossos projetos incluem análise de viabilidade, dimensionamento adequado, Instalação completa e acompanhamento da performance, proporcionando retorno do investimento entre 3 a 5 anos e economia contínua por mais de 25 anos.
 
-      **Usinas Fotovoltaicas:** Executamos projetos de grande porte para geração distribuída, incluindo usinas solares comerciais e industriais. Oferecemos gestão completa desde o estudo de viabilidade, projeto executivo, licenciamento, instalação até a operação e manutenção preventiva.
+      **Usinas Fotovoltaicas:** Executamos projetos de grande porte para geração distribuída, incluindo usinas Solares comerciais e industriais. Oferecemos gestão completa desde o estudo de viabilidade, projeto executivo, licenciamento, Instalação até a operação e manutenção preventiva.
 
       **Vantagens Exclusivas:** Além da significativa economia na conta de luz, nossos clientes desfrutam de valorização imobiliária, sustentabilidade ambiental, acesso a linhas de financiamento especiais, isenção de impostos e contribuição efetiva para a redução das emissões de CO2.`,
       features: [
-        'Energia solar residencial',
+        'Energia Solar residencial',
         'Sistemas empresariais',
         'Usinas fotovoltaicas',
         'Monitoramento e economia'
@@ -98,7 +98,7 @@ const Services = () => {
       icon: <BsHouse size={50} />,
       title: 'Automação Residencial',
       description: 'Casa inteligente com comando de voz, controle automatizado e sistemas integrados para maior conforto e praticidade.',
-      detailedDescription: `Transforme sua residência em uma casa verdadeiramente inteligente com nossos sistemas de automação residencial de última geração, proporcionando máximo conforto, segurança e eficiência energética.
+      detailedDescription: `Transforme sua residência em uma casa verdadeiramente inteligente com nossos sistemas de automação residencial de última geração, proporcionando máximo conforto, segurança e Eficiência Energética.
 
       **Casa Inteligente Completa:** Oferecemos integração total de todos os sistemas da casa - iluminação LED inteligente, climatização automatizada, sistema de som ambiente, controle de persianas e cortinas, gestão de energia e muito mais. Tudo funciona de forma sincronizada através de uma única plataforma central.
 
@@ -123,7 +123,7 @@ const Services = () => {
       icon: <BsShield size={50} />,
       title: 'Sistema de Segurança Eletrônica',
       description: 'Proteção completa com câmeras de segurança 4K, alarmes inteligentes, controle de acesso biométrico e monitoramento 24h.',
-      detailedDescription: `A EngEnigma oferece as mais avançadas soluções em segurança eletrônica, proporcionando proteção total para residências, empresas e condomínios através de tecnologia de ponta e monitoramento profissional.
+      detailedDescription: `A EngEnigma oferece as mais avançadas soluções em Segurança Eletrônica, proporcionando proteção total para residências, empresas e condomínios através de tecnologia de ponta e monitoramento profissional.
 
       **CFTV 4K Ultra HD:** Sistemas de videomonitoramento com câmeras de altíssima resolução 4K, visão noturna infravermelha até 40 metros, lentes varifocais motorizadas e recursos de inteligência artificial para detecção automática de movimento e reconhecimento facial. Gravação em nuvem e local com backup redundante.
 
@@ -282,7 +282,7 @@ const Services = () => {
       icon: <BsSpeedometer2 size={50} />,
       title: 'Eficiência Energética',
       description: 'Soluções tecnológicas integradas para criar sistemas energéticos mais eficientes e sustentáveis, reduzindo custos operacionais e impacto ambiental.',
-      detailedDescription: `A eficiência energética fundamenta-se na ideia de utilizar a energia de forma mais racional e eficaz, garantindo que uma maior parte da energia consumida seja convertida em trabalho útil, com o mínimo de desperdício possível.
+      detailedDescription: `A Eficiência Energética fundamenta-se na ideia de utilizar a Energia de forma mais racional e eficaz, garantindo que uma maior parte da Energia consumida seja convertida em trabalho útil, com o mínimo de desperdício possível.
 
       **Nossa Abordagem:** Buscamos constantemente por métodos que permitam aproveitar ao máximo cada unidade de energia consumida, promovendo benefícios ambientais, econômicos e sociais. Nossa equipe é capaz de integrar soluções tecnológicas para criar um sistema energético mais eficiente e sustentável.
 
@@ -298,11 +298,11 @@ const Services = () => {
       
       **3. Aumento da Vida Útil dos Equipamentos:** Equipamentos que operam adequadamente tendem a funcionar de forma eficaz e menos estressante, aumentando durabilidade e reduzindo manutenção.
       
-      **4. Competitividade Econômica:** Empresas que adotam práticas de eficiência energética reduzem custos operacionais, tornando-se mais competitivas no mercado.
+      **4. Competitividade Econômica:** Empresas que adotam práticas de Eficiência Energética reduzem custos operacionais, tornando-se mais competitivas no mercado.
       
-      **5. Conformidade com Normas:** Cumprimento de metas de eficiência energética através de políticas públicas e regulamentações ambientais, proporcionando vantagens competitivas.`,
+      **5. Conformidade com Normas:** Cumprimento de metas de Eficiência Energética através de políticas públicas e regulamentações ambientais, proporcionando vantagens competitivas.`,
       features: [
-        'Análise de consumo energético',
+        'Análise de consumo Energético',
         'Soluções para empresas de grande porte',
         'Redução de custos operacionais',
         'Modernização de infraestrutura',
@@ -449,7 +449,7 @@ const Services = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="mb-4">
-              {/* <div className="company-image slide-element"> */}
+              {/* <div className="company-image slide-element">  */}
                 <img 
                   src={getImagePath("/images/BRINDE-2.jpg")}
                   alt="Engenigma - Nossa Empresa" 

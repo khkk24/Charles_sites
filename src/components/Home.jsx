@@ -40,17 +40,17 @@ const Home = () => {
     {
       image: getImagePath('/images/engenigma-brand-1.jpg'),
       title: 'Engenigma - Sua Empresa de Confiança',
-      description: 'Especialistas em instalações elétricas com anos de experiência e qualidade garantida'
+      description: 'Especialistas em Instalações Elétricas com anos de experiência e qualidade garantida'
     },
     {
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80',
       title: 'Energia Solar Fotovoltaica',
-      description: 'Soluções sustentáveis em energia renovável para economia e sustentabilidade'
+      description: 'Soluções sustentáveis em Energia renovável para economia e sustentabilidade'
     },
     {
       image: getImagePath('/images/engenigma-brand-2.jpg'),
       title: 'Excelência em Serviços Elétricos',
-      description: 'Nossa equipe qualificada oferece as melhores soluções para suas necessidades elétricas'
+      description: 'Nossa equipe qualificada oferece as melhores soluções para suas necessidades Elétricas'
     },
     {
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
@@ -63,12 +63,12 @@ const Home = () => {
     {
       icon: <BsLightning size={40} />,
       title: 'Elétrica Residencial, Predial e Industrial',
-      description: 'Projetos e instalações elétricas completas para residências, prédios e indústrias'
+      description: 'Projetos e Instalações Elétricas completas para residências, prédios e indústrias'
     },
     {
       icon: <BsSun size={40} />,
       title: 'Energia Solar Fotovoltaica',
-      description: 'Sistemas solares residenciais, empresariais e usinas fotovoltaicas'
+      description: 'Sistemas Solares residenciais, empresariais e usinas fotovoltaicas'
     },
     {
       icon: <BsHouse size={40} />,
@@ -78,7 +78,7 @@ const Home = () => {
     {
       icon: <BsShield size={40} />,
       title: 'Segurança Eletrônica',
-      description: 'Alarmes, cercas elétricas, câmeras e monitoramento 24h'
+      description: 'Alarmes, cercas Elétricas, câmeras e monitoramento 24h'
     },
     {
       icon: <BsUmbrella size={40} />,
@@ -108,7 +108,7 @@ const Home = () => {
     {
       icon: <BsBattery size={40} />,
       title: 'Nobreak e Geradores',
-      description: 'Sistemas de energia de emergência e backup'
+      description: 'Sistemas de Energia de emergência e backup'
     },
     {
       icon: <BsFileText size={40} />,
@@ -126,8 +126,8 @@ const Home = () => {
     <div className="home-page">
       <SEO 
         title="Engenigma Instalações Elétricas - Curitiba, PR"
-        description="Especialistas em instalações elétricas, energia solar e segurança eletrônica em Curitiba. Projetos residenciais, comerciais e industriais. Orçamento gratuito!"
-        keywords="instalações elétricas Curitiba, energia solar, segurança eletrônica, SPDA, manutenção elétrica, projeto elétrico"
+        description="Especialistas em Instalações Elétricas, Energia Solar e Segurança Eletrônica em Curitiba. Projetos residenciais, comerciais e industriais. Orçamento gratuito!"
+        keywords="Instalações Elétricas Curitiba, Energia Solar, Segurança Eletrônica, SPDA, Manutenção Elétrica, projeto Elétrico"
       />
       
       {/* Hero Section com Carousel */}

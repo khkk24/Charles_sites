@@ -106,13 +106,13 @@ const WhatsAppFloat = () => {
 
       {/* Botões de ação rápida */}
       <div className="quick-actions">
-        <div className="action-btn" data-message="Gostaria de um orçamento para instalação elétrica">
+        <div className="action-btn" data-message="Gostaria de um orçamento para Instalação Elétrica">
           <span className="action-text">💡 Orçamento</span>
         </div>
-        <div className="action-btn" data-message="Preciso de manutenção elétrica urgente">
+        <div className="action-btn" data-message="Preciso de Manutenção Elétrica urgente">
           <span className="action-text">🚨 Emergência</span>
         </div>
-        <div className="action-btn" data-message="Tenho interesse em energia solar">
+        <div className="action-btn" data-message="Tenho interesse em Energia Solar">
           <span className="action-text">☀️ Energia Solar</span>
         </div>
       </div>

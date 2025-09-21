@@ -18,13 +18,13 @@ const QuemSomos = () => {
             <Card.Body className="p-5">
               <h2 className="mb-4">QUEM SOMOS</h2>
               <p className="mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                Fundada no início de 2021 pelo Engenheiro Mahutin Charles Géraud ABAMI, a <strong>ENGENIGMA INSTALAÇÕES ELÉTRICAS E MANUTENÇÃO LTDA</strong>, nasceu com objetivo de fornecer serviços especializados na instalação, manutenção, reparo e modernização de sistemas elétricos em diversos tipos de edificações, como residências, comércios, indústrias e espaços públicos; agregando valor aos projetos dos clientes e promovendo um ambiente mais sustentável e confiável. Além disso, garantia de segurança, eficiência e conformidade das instalações elétricas com as normas técnicas e regulamentações vigentes.
+                Fundada no início de 2021 pelo Engenheiro Mahutin Charles Géraud ABAMI, a <strong>ENGENIGMA INSTALAÇÕES ELÉTRICAS E MANUTENÇÃO LTDA</strong>, nasceu com objetivo de fornecer serviços especializados na Instalação, manutenção, reparo e modernização de sistemas Elétricos em diversos tipos de edificações, como residências, comércios, indústrias e espaços públicos; agregando valor aos projetos dos clientes e promovendo um ambiente mais sustentável e confiável. Além disso, garantia de segurança, eficiência e conformidade das Instalações Elétricas com as normas técnicas e regulamentações vigentes.
               </p>
               <p className="mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                A <strong>ENGENIGMA INSTALAÇÕES ELÉTRICAS E MANUTENÇÃO LTDA</strong>, defende desde sua fundação o conceito de que todos devem ter acesso a serviços de eletricista prestados por profissionais experientes e capacitados com um custo acessível; por este motivo que nós atendemos a todo tipo de demanda, que vai desde uma simples troca de tomada residencial até o desenvolvimento de projetos de instalações elétricas de alta complexidade, inclusive com a aprovação dos órgãos competentes (CREA-PR).
+                A <strong>ENGENIGMA INSTALAÇÕES ELÉTRICAS E MANUTENÇÃO LTDA</strong>, defende desde sua fundação o conceito de que todos devem ter acesso a serviços de eletricista prestados por profissionais experientes e capacitados com um custo acessível; por este motivo que nós atendemos a todo tipo de demanda, que vai desde uma simples troca de tomada residencial até o desenvolvimento de projetos de Instalações Elétricas de alta complexidade, inclusive com a aprovação dos órgãos competentes (CREA-PR).
               </p>
               <p className="mb-4" style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                Nossa equipe é composta por engenheiros especialistas e mestres em projetos e instalações elétricas de baixa, média e alta tensão. Nossos técnicos são experientes e capacitados para solucionar seus problemas. Nossos engenheiros estão sempre em busca de aprimoramento e atualização técnica para oferecer as melhores soluções do mercado, adaptando-se às demandas e tendências do setor.
+                Nossa equipe é composta por engenheiros especialistas e mestres em projetos e Instalações Elétricas de baixa, média e alta tensão. Nossos técnicos são experientes e capacitados para solucionar seus problemas. Nossos engenheiros estão sempre em busca de aprimoramento e atualização técnica para oferecer as melhores soluções do mercado, adaptando-se às demandas e tendências do setor.
               </p>
             </Card.Body>
           </Card>
@@ -72,7 +72,7 @@ const QuemSomos = () => {
                 <Card.Body className="p-4">
                   <h3 className="mb-3">MISSÃO</h3>
                   <p style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                    Nossa missão é fornecer soluções elétricas seguras, eficientes e sustentáveis, garantindo a satisfação dos clientes por meio de um atendimento personalizado e de excelência. Buscamos inovar constantemente, respeitando as normas técnicas e contribuindo para um futuro mais sustentável.
+                    Nossa missão é fornecer soluções Elétricas seguras, eficientes e sustentáveis, garantindo a satisfação dos clientes por meio de um atendimento personalizado e de excelência. Buscamos inovar constantemente, respeitando as normas técnicas e contribuindo para um futuro mais sustentável.
                   </p>
                 </Card.Body>
               </Card>
@@ -85,7 +85,7 @@ const QuemSomos = () => {
                 <Card.Body className="p-4">
                   <h3 className="mb-3">VISÃO</h3>
                   <p style={{ textAlign: 'justify', lineHeight: '1.6' }}>
-                    Ser reconhecida como a empresa líder em projetos, instalações e manutenções elétricas, destacando-se pela excelência, inovação e compromisso com a sustentabilidade. Almejamos expandir nossa atuação, oferecendo soluções energéticas de ponta que contribuam para um futuro mais seguro e eficiente.
+                    Ser reconhecida como a empresa líder em projetos, Instalações e manutenções Elétricas, destacando-se pela excelência, inovação e compromisso com a sustentabilidade. Almejamos expandir nossa atuação, oferecendo soluções Energéticas de ponta que contribuam para um futuro mais seguro e eficiente.
                   </p>
                 </Card.Body>
               </Card>

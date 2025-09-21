@@ -53,7 +53,7 @@ const Dashboard = () => {
       points: 350,
       level: 'Master',
       color: 'warning',
-      description: 'Soluções sustentáveis em energia solar para economia e meio ambiente.',
+      description: 'Soluções sustentáveis em Energia Solar para economia e meio ambiente.',
       category: 'Energia Renovável',
       progress: 100,
       unlockDate: '2025-01-20'
@@ -437,7 +437,7 @@ const Dashboard = () => {
                   <div className="title-underline"></div>
                 </h1>
                 <p className="dashboard-subtitle mb-4">
-                  Explore nossa jornada de excelência em instalações elétricas e descubra 
+                  Explore nossa jornada de excelência em Instalações Elétricas e descubra 
                   como nossos <strong>{companyStats.yearsExperience} anos de experiência</strong> podem 
                   transformar seus projetos.
                 </p>
@@ -751,7 +751,7 @@ const Dashboard = () => {
                   </div>
                   <div className="chart-insights mt-3">
                     <small className="text-muted">
-                      <strong>Insights:</strong> Instalações elétricas e energia solar 
+                      <strong>Insights:</strong> Instalações Elétricas e Energia Solar 
                       representam 60% dos nossos projetos.
                     </small>
                   </div>

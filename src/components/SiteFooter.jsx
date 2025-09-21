@@ -61,7 +61,7 @@ const SiteFooter = () => {
               <div className="footer-section">
                 <h5 className="footer-title">Engenigma</h5>
                 <p className="footer-description">
-                  Especialistas em instalações elétricas, energia solar e segurança eletrônica. 
+                  Especialistas em Instalações Elétricas, Energia Solar e Segurança Eletrônica. 
                   Oferecemos soluções completas com qualidade e segurança desde 2021.
                 </p>
                 <div className="company-info">
@@ -162,7 +162,7 @@ const SiteFooter = () => {
                 <div className="newsletter">
                   <h6 className="newsletter-title">Newsletter</h6>
                   <p className="newsletter-description">
-                    Receba dicas e novidades sobre instalações elétricas
+                    Receba dicas e novidades sobre Instalações Elétricas
                   </p>
                   <div className="newsletter-form">
                     <div className="input-group">
